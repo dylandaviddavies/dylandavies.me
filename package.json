@@ -1,7 +1,7 @@
 {
   "name": "dylandavies.me",
   "version": "1.0.0",
-  "description": "",
+  "description": "Personal website",
   "main": "index.js",
   "dependencies": {
     "@babel/core": "^7.3.4",
@@ -28,7 +28,7 @@
     "type": "git",
     "url": "git+https://github.com/dylandaviddavies/dylandavies.me.git"
   },
-  "author": "",
+  "author": "Dylan Davies",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dylandaviddavies/dylandavies.me/issues"
