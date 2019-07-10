@@ -6,6 +6,6 @@
   }
   @mixin outline($colour) {
     color: $colour;
-    border: 1px solid $colour;
+    border: 0.11em solid $colour;
     @include outlineHover($colour);
   }

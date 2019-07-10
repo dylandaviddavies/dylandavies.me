@@ -15,23 +15,127 @@
         "partials/buttons",
         "partials/forms",
         "partials/hero";
-
+.material-icons-outlined{
+  font-size:1.5em;
+}
+.points{
+  display:flex;  
+  @media (max-width: $breakpoint-desktop) {
+    flex-direction:column;
+  }
+}
+.point{
+  display:inline-flex;
+  flex-direction:column;
+  padding:2em;
+  &__label {
+    font-size:1.5em;
+  }
+  &__icon {
+    font-size:5em;
+    color:#08c;
+    padding:0.3em;
+  }
+  align-items:center;
+}
+.points{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
 body {
   margin: 0;
-  background: linear-gradient(90deg,#213058,#181d58);
-  overflow:hidden;
+  color:$black;
+  background: #fff;
 }
 html,
 body {
   height: 100%;
   width: 100%;
 }
+.box{
+  background-color:$white;
+  padding:2em;
+  box-sizing:border-box;
+  border-top:0.25em solid #08c;
+  border-radius:0.25em;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  .box__title{
+    margin:0;
+  }
+}
 body,
 button,
 textarea,
 input {
   font-family: $font-family;
+  font-size:1em;
 }
 button{
   cursor:pointer;
+}
+@media (max-width: $breakpoint-desktop) {
+  body{
+    font-size:28px;
+  }
+}
+h1{
+  margin:0.6em 0;
+}
+.content{
+  max-width:960px;
+  padding:0 0.5em;
+  margin:0 auto;
+}
+.nav{ 
+  margin:0 auto;
+  display:flex;
+  background:#fff;
+  justify-content:space-between;
+  height:5em;
+  align-items:center;
+  &__img{
+    height:60%;
+    display:block;
+  }
+  &__items{
+    list-style-type:none;
+    display:flex;
+    padding:0;
+  }
+  &__item{
+    &__link{
+      padding: 1.5em 1.5em;
+      text-transform:uppercase;
+      height:100%;
+      display:flex;
+      color:#333;
+      text-decoration:none;
+      &:hover,&:active,&:active:focus,&:focus{
+        text-decoration:none;
+        color:#333;
+      }
+      &--active{
+        color:#08c;
+        border-bottom:0.1em solid #08c;
+      }
+    }
+  }
+  &--transparent{
+    background:none;    
+  }
+  &--light{
+    & .nav__item{
+      &__link{
+        color:#fff;
+        &:hover,&:active,&:active:focus,&:focus{
+          text-decoration:none;
+          color:#fff;
+        }
+        &--active{
+          border-bottom:0.1em solid #fff;
+        }
+      }
+    }
+  }
 }

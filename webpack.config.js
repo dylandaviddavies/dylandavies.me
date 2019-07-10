@@ -4,7 +4,7 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 module.exports = {
     mode: 'production',
     entry: {
-        "bundle.min.js": "./resources/scripts/js/index.js"
+        "../public/dist/bundle.min.js": "./resources/scripts/js/index.js"
     },
     output: {
         path: path.resolve(__dirname, 'dist/'),
@@ -55,8 +55,8 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "bundle.min.css",
-            chunkFilename: "bundle.min.css"
+            filename: "../public/dist/bundle.min.css",
+            chunkFilename: "../public/dist/bundle.min.css"
         }),
         new OptimizeCSSAssetsPlugin({})
     ]
