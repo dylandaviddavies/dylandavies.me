@@ -1,21 +1,33 @@
 .btn{
-    border-radius:2em;
+    border-radius:0.2em;
     background:none;
     margin-right:0.5em;
     margin-bottom:0.5em;
     &.white{
       color:$white;
     }
-    &.btn--text{
+    &--text{
       border:none;
     }
-    &.btn--outline{
+    &--outline{
       padding:0.8em 2em;
       &.blue{
         @include outline(#08c);
       }
       &.white{
         @include outline($white);  
+      }
+    }
+    &--fill{
+      padding:0.8em 2em;
+      &.blue{
+        @include fill(#08c);
+      }
+    }
+    &--responsive-block{      
+      @media (max-width: $breakpoint-desktop) {
+        width:100%;
+        display:block;
       }
     }
   }

@@ -60,8 +60,15 @@ body {
   border-top:0.25em solid #08c;
   border-radius:0.25em;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  .box__title{
-    margin:0;
+  &__title{
+    box-sizing:border-box;
+    margin:0 auto;
+    padding:0.5em 1em;
+    margin-bottom:1em;
+    border-bottom:0.1em solid #08c;
+    display:flex;
+    font-weight:normal;
+    align-items:center;
   }
 }
 body,
@@ -89,11 +96,21 @@ h1{
 }
 .nav{ 
   margin:0 auto;
+  padding:0px 2em;
+  @media (max-width: $breakpoint-desktop) {
+    padding:0px 1em;
+  }
   display:flex;
+  box-sizing:border-box;
   background:#fff;
   justify-content:space-between;
   height:5em;
   align-items:center;
+  &__img-link{
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
   &__img{
     height:60%;
     display:block;
@@ -102,13 +119,16 @@ h1{
     list-style-type:none;
     display:flex;
     padding:0;
+    margin:0;
   }
   &__item{
     &__link{
       padding: 1.5em 1.5em;
       text-transform:uppercase;
       height:100%;
+      align-items:center;
       display:flex;
+      box-sizing:border-box;
       color:#333;
       text-decoration:none;
       &:hover,&:active,&:active:focus,&:focus{

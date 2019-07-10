@@ -9,3 +9,17 @@
     border: 0.11em solid $colour;
     @include outlineHover($colour);
   }
+  @mixin fillHover($colour) {
+    &:hover {
+      transition: background 100ms ease-in-out, box-shadow 100ms ease-in-out, border 100ms ease-in-out;
+      background: lighten($colour, 5%);
+      border-color: lighten($colour, 5%);
+    }
+  }
+  @mixin fill($colour) {
+    color:$white;
+    background-color: $colour;
+    border: 0.11em solid $colour;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+    @include fillHover($colour);
+  }
