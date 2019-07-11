@@ -52,13 +52,6 @@
     }
     &__btn{
       border-radius:2em;
-      padding:1em 2em;
       margin-bottom:1em;
-      @include outline($white);
-      text-decoration:none;
-      &:hover,&:active,&:active:focus,&:focus{
-        text-decoration:none;
-        color:#fff;
-      }
     }
   }

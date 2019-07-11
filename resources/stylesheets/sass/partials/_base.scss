@@ -6,5 +6,7 @@ $black:#333;
 $grey:#e4e4e4;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
-
+$primary:#00b8ff;
+$secondary:#b08fff;
+$primary-gradient:linear-gradient(15deg, #b08fff, #00b8ff);
 @import '../modules/mixins';

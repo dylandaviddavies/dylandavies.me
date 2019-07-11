@@ -1,8 +1,10 @@
 .btn{
-    border-radius:0.2em;
+    border-radius:2em;
     background:none;
     margin-right:0.5em;
     margin-bottom:0.5em;
+    text-decoration:none;
+    padding:1em 3em;
     &.white{
       color:$white;
     }
@@ -10,18 +12,13 @@
       border:none;
     }
     &--outline{
-      padding:0.8em 2em;
-      &.blue{
-        @include outline(#08c);
-      }
-      &.white{
-        @include outline($white);  
+      &.primary{
+        @include outline($primary);
       }
     }
     &--fill{
-      padding:0.8em 2em;
       &.blue{
-        @include fill(#08c);
+        @include fill($secondary, $primary);
       }
     }
     &--responsive-block{      
