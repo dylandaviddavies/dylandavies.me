@@ -8,5 +8,5 @@ $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
 $primary:#00b8ff;
 $secondary:#b08fff;
-$primary-gradient:linear-gradient(15deg, #b08fff, #00b8ff);
+$primary-gradient:linear-gradient(15deg, $secondary, $primary);
 @import '../modules/mixins';
