@@ -1,0 +1,29 @@
+$maxWords: 6;
+$wordDelay: 2s;
+.rotatingWords{
+    display: inline;
+    text-indent:16px;
+}
+.rotatingWords span{
+    animation: rotateWord $wordDelay * $maxWords linear infinite 0s; 
+	color: $primary;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+}
+@for $i from 2 through $maxWords {   
+    $m: $i - 1;
+    .rotatingWords span:nth-child(#{$i}){
+        animation-delay: $wordDelay * $m;
+    }
+}
+
+@keyframes rotateWord{
+	0% { opacity: 0; }
+	5% { opacity: 0; transform: translateY(-1em); }
+	10% { opacity: 1; transform: translateY(0em); }
+	20% { opacity: 1; transform: translateY(0em); }
+	25% { opacity: 0; transform: translateY(1em); }
+	75% { opacity: 0; }
+	100% { opacity: 0; }
+}

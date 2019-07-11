@@ -2,3 +2,4 @@
 node_modules/
 .sass-cache/
 .firebase/hosting.cHVibGlj.cache
+firebase-debug.log
