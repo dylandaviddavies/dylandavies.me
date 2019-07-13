@@ -30,6 +30,7 @@
     }
     &__item{
       &__link{
+        border-bottom:0.1em solid transparent;
         padding: 2em;
         @media (max-width: $breakpoint-desktop) {
           padding:2em 1em;
@@ -49,7 +50,7 @@
         }
         &--active{
           color:$primary;
-          border-bottom:0.1em solid $primary;
+          border-bottom-color:$primary;
         }
       }
     }
