@@ -18,7 +18,8 @@
         "partials/boxes",
         "partials/navs",
         "partials/lines",
-        "partials/rotatingwords";
+        "partials/rotatingwords",
+        "partials/flex";
 .material-icons-outlined{
   font-size:1.5em;
 }
@@ -43,10 +44,13 @@
   @media (max-width: $breakpoint-desktop) {
     flex-direction:column;
     align-items:center;
+    &>*{
+      width:33%;
+    }  
   }
   @media (min-width: $breakpoint-desktop) {
     &>*{
-      width:33%;
+      width:inherit;
     }  
   }
   justify-content:space-around;
@@ -115,6 +119,7 @@ h1{
 }
 .content{
   max-width:960px;
+  width:100%;
   padding:0 0.5em;
   margin:0 auto;
   box-sizing:border-box;
@@ -143,4 +148,15 @@ h1{
     text-align:center;
     font-weight:normal;
   }
+}
+
+@media (max-width: $breakpoint-phone) {
+  body{
+    font-size:13px;
+  }  
+}
+@media (min-width: $breakpoint-tablet) {
+  body{
+    font-size:18px;
+  }  
 }

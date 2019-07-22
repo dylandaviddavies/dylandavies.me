@@ -25,19 +25,19 @@
     <meta name="twitter:description"        content="A full-stack developer & programmer with professional experience using Java, C#, SQL, ASP.NET, HTML, CSS, and JavaScript.">
     <meta name="twitter:image"              content="http://dylandavies.me/dist/thumbnail.png">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link href="dist/bundle.min.css?v=8" rel="stylesheet" type="text/css" />
-    <script src="https://kit.fontawesome.com/2c7ccbb05b.js"></script>
+    <link href="dist/bundle.min.css?v=11" rel="stylesheet" type="text/css" />
 </head>
 
-<body style="overflow-x:hidden;">
+<body>
     <div class="hero full">
         <div class="hero__img" style="background-image:url('dist/index-bg.jpg')"></div>
         <div class="hero__overlay hero__overlay--dark"></div>
-        <div class="hero__content">
-            <nav class="nav nav--transparent nav--light" style="margin:0;">
+        <div class="hero__content">            
+            <nav class="nav nav--transparent nav--light">
                 <a href="/" class="nav__img-link">
                     <img class="nav__img" src="dist/logo.png" alt="Dylan Davies">
                 </a>
+                <button class="nav__expand"><i class="nav__expand__icon material-icons-outlined" aria-hidden="true">menu</i></i></button>
                 <ul class="nav__items">
                     <li class="nav__item">
                         <a href="/" class="nav__item__link nav__item__link--active">
@@ -51,69 +51,27 @@
                     </li>
                 </ul>
             </nav>
-            <div style="margin:3em 0;display:flex;flex-direction:column;align-items:center;">
-                <div style="margin-bottom:1em;">
-                    <h1 class="hero__title">
-                        Hi,<br />
-                        I'm <span style="font-family:'Mr Dafoe';margin-right:0.2em;font-size:1.5em;line-height:1.5em;">D</span>ylan, <br />
-                        a <span class="rotatingWords">
-                            <span>programmer</span>
-                            <span>developer</span>
-                            <span>designer</span>
-                            <span>friend</span>
-                            <span>cat dad</span>
-                            <span>coworker</span>
-                        </span>
-                    </h1>
-                    <p class="hero__subtitle" style="margin-top:1.9em;">Full-Stack Developer / Programmer</p>
-                </div>
+            <div class="flex flex--grow flex--centre flex--column">
+                <h1 class="hero__title">
+                    Hi,<br />
+                    I'm <span style="font-family:'Mr Dafoe';margin-right:0.2em;font-size:1.5em;line-height:1.5em;">D</span>ylan, <br />
+                    a <span class="rotatingWords">
+                        <span>programmer</span>
+                        <span>developer</span>
+                        <span>designer</span>
+                        <span>friend</span>
+                        <span>cat owner</span>
+                        <span>coworker</span>
+                    </span>
+                </h1>
+                <p class="hero__subtitle">Full-Stack Developer / Programmer</p>
                 <a href="contact.html" class="hero__btn btn btn--fill blue">
                     Let's make something great
                 </a>
             </div>
         </div>
     </div>
-    <div class="section full">
-        <div class="section__header">
-            <h2 class="section__title">My Services</h2>
-            <div class="line line--small line--primary"></div>
-        </div>
-        <div class="section_content">
-            <div class="points">
-                <div class="point">
-                    <i class="point__icon material-icons-outlined">computer</i>
-                    <div>
-                        <div class="point__label">UX Design</div>
-                        <p class="point__description">
-                            
-                        </p>
-                        <div class="line line--small line--primary"></div>    
-                    </div>
-                </div>
-                <div class="point">
-                    <i class="point__icon material-icons-outlined">devices_other</i>
-                    <div>
-                        <div class="point__label">Front-end Development</div>
-                        <div class="point__tags">
-                            <i style="color:rgb(241,101,41);" class="point__tag fab fa-html5"></i>
-                            <i style="color:rgb(41,101,241)" class="point__tag fab fa-css3"></i>
-                            <i style="color:rgb(247,223,30)" class="point__tag fab fa-js"></i>
-                            <i style="color:rgb(65,184,131)" class="point__tag fab fa-vuejs"></i>
-                        </div>
-                        <div class="line line--small line--primary"></div>    
-                    </div>
-                </div>
-                <div class="point">
-                    <i class="point__icon material-icons-outlined">code</i>
-                    <div>
-                        <div class="point__label">Back-end Development</div>
-                        <div class="line line--small line--primary"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="dist/bundle.min.js?v=4"></script>
+    <script src="dist/bundle.min.js?v=11"></script>
 </body>
 
 </html>
