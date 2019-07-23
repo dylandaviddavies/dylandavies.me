@@ -1,14 +1,14 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat|Material+Icons+Outlined|Mr+Dafoe);
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Material+Icons|Material+Icons+Outlined|Mr+Dafoe);
 
 $font-family: "Montserrat", sans-serif;
 $white: #fff;
 $black:#333;
 $grey:#e4e4e4;
+$primary:#110818;
+$secondary: #150d1c;
+$white:#fff;
 $breakpoint-phone: 480px;
-$breakpoint-tablet: 768px;
-$breakpoint-desktop: 1024px;
-$primary:#150d1c;
-$secondary:#b08fff;
-$nav-height:4.5em;
+$breakpoint-tablet: 767px;
+$breakpoint-desktop: 1023px;
 $primary-gradient:linear-gradient(15deg, $secondary, $primary);
 @import '../modules/mixins';

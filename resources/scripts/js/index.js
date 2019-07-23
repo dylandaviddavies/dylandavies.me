@@ -1,5 +1,9 @@
+import * as $ from 'jquery';
 require('../../stylesheets/sass/index.scss');
 import DdInputContainer from "./modules/InputContainer";
-import DdNav from "./modules/Nav";
 document.querySelectorAll(".input-container").forEach(ic => new DdInputContainer(ic));
-new DdNav(document.querySelector(".nav"));
+$(document).on("click", ".next-section-btn", function(){
+    $('html,body').animate({
+        scrollTop: $(this).parents(".section").next().offset().top},
+        'slow');
+});

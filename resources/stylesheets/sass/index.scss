@@ -12,151 +12,206 @@
 */
 
 @import "partials/base",
-        "partials/buttons",
         "partials/forms",
         "partials/heroes",
-        "partials/boxes",
-        "partials/navs",
         "partials/lines",
         "partials/rotatingwords",
-        "partials/flex";
-.material-icons-outlined{
-  font-size:1.5em;
+        "partials/flex",
+        "partials/boxes";
+.main{
+  display:grid;
+  grid-template-columns:1fr;
+  grid-template-rows:repeat(3, minmax(100vh,auto));
 }
-.full{
-  height:100vh;
-  width:100vw;
-  @media (max-width: $breakpoint-desktop) {
-    height:auto;
-  }
-}
-.flex{
+.section{
+  position:relative;
   display:flex;
-  &--center{
-    &--all{
-      align-items:center;
-      justify-content:center;
-    }
-  }
-}
-.points{
-  display:flex;  
-  @media (max-width: $breakpoint-desktop) {
-    flex-direction:column;
-    align-items:center;
-    &>*{
-      width:33%;
-    }  
-  }
-  @media (min-width: $breakpoint-desktop) {
-    &>*{
-      width:inherit;
-    }  
-  }
-  justify-content:space-around;
-}
-.point{
-  display:inline-flex;
   flex-direction:column;
-  padding:2em;
-  &__tag{
-    font-size:2em;
+  justify-content:center;
+  align-items:center;
+  padding:12em 0;
+  @media(max-width:$breakpoint-tablet){
+    padding:10em 0;
   }
-  &__tags{
+  box-sizing:border-box;
+  &:nth-child(odd){
+    background-color:$primary;
+  }
+  &:nth-child(even){
+    background-color:$secondary;
+  }
+  &__header{
+    width:100%;
     display:flex;
+    height:12em;
+    @media(max-width:$breakpoint-tablet){
+      height:10em;
+    }
     justify-content:center;
-    & > * {
-      margin:0 0.2em;
+    flex-direction:column;
+    position:absolute;
+    top:0;
+    align-items:center;
+    & .underline{
+      width:5%;
     }
   }
-  &__description{
-    color:#b6b6b6;
-    font-style:italic;
+  &__title{
+    text-transform:uppercase;
+    font-size:3em;
+    margin:0.4em 0;
+    @media(max-width:$breakpoint-tablet){
+      font-size:2.2em;
+    }
   }
-  &__label {
-    font-size:1.5em;
-    line-height:1.3em;
-    text-align:center;
-  }
-  &__icon {
-    display:flex;justify-content:center;align-items:center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    font-size:7em;
-    margin-bottom:0.3em;
-    color:#fff;
-    background:$primary-gradient;
-    border-radius:100%;
-    width:1.2em;height:1.2em;
-    padding:0.3em;
-  }
+}
+.hero{
+  display:flex;
+  position:relative;
+  flex-direction:column;
+  justify-content:center;
   align-items:center;
+  &__title{
+    font-size:8em;
+    margin:0;
+    margin-bottom:0.5em;
+    text-align:center;    
+    @media(max-width: $breakpoint-tablet){
+      font-size:5em;
+    }
+  }
+  &__logo{
+    height:3em;
+    position:absolute;
+    top: 3em;
+  }
+  &__btn{
+    font-size:1.5em;
+    @media(max-width: $breakpoint-tablet){
+      font-size:1.1em;
+    }
+    background:none;
+    border:0.1em solid $white;
+    padding:1em 2em;
+    border-radius:2em;
+    box-sizing:border-box;
+    color:$white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition: background 0.1s ease-in-out;
+    & > i.material-icons{
+      margin-left:0.2em;
+      font-size:1.5em;
+      transition: transform 0.3s ease-in-out;
+    }
+    &:hover {
+      background:rgba(255,255,255,0.1);
+      & > i.material-icons{
+        transform:rotate(90deg);
+      }
+    }
+  }
 }
-body {
-  margin: 0;
-  color:$black;
-  background: #fff;
+body,html{
+  margin:0;
 }
-html,
-body {
-  height: 100%;
-  width: 100%;
+body{
+  color:$white;
 }
-body,
-button,
-textarea,
-input {
-  font-family: $font-family;
-  font-size:1em;
+body,button,input,textarea,select{
+  font-family:'Montserrat',sans-serif;
 }
 button{
   cursor:pointer;
 }
-h1{
-  margin:0.6em 0;
+@media (max-width: $breakpoint-desktop) {
+  body{
+    font-size:14px;
+  }
 }
-h1{
-  line-height:1.1em;
+@media (max-width: $breakpoint-tablet) {
+  body{
+    font-size:12px;
+  }
+}
+.services{
+  width:100%;
+  display:grid;  
+  @media(max-width: $breakpoint-tablet){
+    grid-template-columns: 1fr;
+    grid-row-gap:4em;
+    grid-template-rows: repeat(3, 1fr);        
+  }
+  @media(min-width: $breakpoint-tablet + 1){
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;    
+  }
+  @media(max-width:$breakpoint-phone){
+    grid-row-gap:1.8em;
+  }
+}
+.service{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  & > i.material-icons{
+    border:0.05em solid $white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:100%;
+    font-size:8em;
+    width:1.8em;
+    height:1.8em;
+  }
+  &__title{
+    font-size:1.8em;
+    text-align:center;
+    margin: 1em 0;
+  }
+  @media(max-width:$breakpoint-phone){
+    & > i.material-icons{
+      font-size:3.8em;
+      width:1.8em;
+      height:1.8em;
+    }
+    &__title{
+      font-size:1em;
+      text-align:center;
+      margin: 1em 0;
+    }
+  }
+}
+.underline{
+  background-color:$white;
+  height:0.2em;
+  border-radius:2em;
 }
 .content{
-  max-width:960px;
+  max-width:$breakpoint-tablet;
   width:100%;
   padding:0 0.5em;
   margin:0 auto;
   box-sizing:border-box;
 }
-.section{
-  padding: 4em 0;
-  display:flex;
-  flex-direction:column;
-  box-sizing:border-box;
-  &__content{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+.btn{
+  font-size:1.1em;
+  color:$white;
+  border-radius:2em;
+  background:none;
+  padding:0.7em 2.5em;
+  border:0.1em solid $white;
+  transition: background 0.1s ease-in-out;
+  &:hover {
+    background:rgba(255,255,255,0.1);
+    & > i.material-icons{
+      transform:rotate(90deg);
+    }
   }
-  &__header{
-    margin:1em;
-    flex-direction:column;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+  &--responsive-block{
+    @media(max-width:$breakpoint-tablet){
+      width:100%;
+    }
   }
-  &__title{
-    margin:0.1em;
-    font-size:3em;
-    text-align:center;
-    font-weight:normal;
-  }
-}
-
-@media (max-width: $breakpoint-phone) {
-  body{
-    font-size:13px;
-  }  
-}
-@media (min-width: $breakpoint-tablet) {
-  body{
-    font-size:18px;
-  }  
 }
