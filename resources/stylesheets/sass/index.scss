@@ -155,7 +155,7 @@ button{
   display:flex;
   flex-direction:column;
   align-items:center;
-  & > i.material-icons{
+  &__icon{
     border:0.05em solid $white;
     display:flex;
     align-items:center;
@@ -171,7 +171,7 @@ button{
     margin: 1em 0;
   }
   @media(max-width:$breakpoint-phone){
-    & > i.material-icons{
+    &__icon{
       font-size:3.8em;
       width:1.8em;
       height:1.8em;
