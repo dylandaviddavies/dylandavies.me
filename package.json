@@ -4,28 +4,28 @@
   "description": "Personal website",
   "main": "index.js",
   "dependencies": {
-    "@babel/core": "^7.3.4",
-    "@babel/plugin-transform-classes": "^7.4.0",
-    "@babel/polyfill": "^7.4.0",
-    "@babel/preset-env": "^7.4.2",
-    "animate.css": "^3.7.0",
-    "babel-loader": "^8.0.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-classes": "^7.5.5",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.5.5",
+    "animate.css": "^3.7.2",
+    "babel-loader": "^8.0.6",
     "css-loader": "^2.1.1",
     "express": "^4.17.1",
-    "file-loader": "^4.0.0",
-    "firebase-admin": "^8.2.0",
+    "file-loader": "^4.2.0",
+    "firebase-admin": "^8.3.0",
     "image-webpack-loader": "^5.0.0",
     "jquery": "^3.4.1",
     "mozjpeg": "^6.0.1",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0",
-    "url-loader": "^2.0.1",
-    "webpack": "^4.29.6"
+    "url-loader": "^2.1.0",
+    "webpack": "^4.39.1"
   },
   "devDependencies": {
     "mini-css-extract-plugin": "^0.5.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.1",
-    "webpack-cli": "^3.3.0"
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "webpack-cli": "^3.3.6"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

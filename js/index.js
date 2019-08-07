@@ -1,6 +1,6 @@
 import * as $ from 'jquery';
-require('../../../stylesheets/sass/main/index.scss');
-import DdInputContainer from "./modules/InputContainer";
+require('../../../sass/index.scss');
+import DdInputContainer from "./components/InputContainer";
 document.querySelectorAll(".input-container").forEach(ic => new DdInputContainer(ic));
 $(document).on("click", ".next-section-btn", function(){
     $('html,body').animate({
