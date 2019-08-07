@@ -1,1 +1,0 @@
-require('../../../stylesheets/sass/recipes/index.scss');

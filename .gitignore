@@ -1,11 +1,11 @@
 
 node_modules/
 .sass-cache/
-.firebase/hosting.cHVibGlj.cache
+.firebase/
 firebase-debug.log
 .firebaserc
 firebase.json
 firestore.rules
 storage.rules
-firebase.indexes.json
+firestore.indexes.json
 functions/serviceAccountKey.json
