@@ -1,0 +1,8 @@
+.box{
+    padding:2em;
+    box-sizing:border-box;
+    &__title{
+      margin:0 auto;
+      font-weight:normal;
+    }
+  }

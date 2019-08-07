@@ -1,0 +1,73 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Material+Icons|Material+Icons+Outlined);
+body,textarea,input,button{
+    font-family:"Montserrat", sans-serif;
+}
+body{
+    background-color:#f5f5f5;
+}
+$primary:#08c;
+.cards{
+    display:grid;
+    grid-auto-columns: 320px;
+    grid-auto-rows: auto;    
+}
+.card{
+    background-color:#fff;
+    border-radius:3px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    &__head{
+        height:200px;
+    }
+    &__img{
+        height:100%;
+        width:100%;
+        object-fit:cover;
+    }
+    &__info{
+        padding:16px;        
+    }   
+    &__author{
+        font-size:14px;
+        margin-bottom:12px;
+    }
+    &__title{
+        font-weight:bold;
+        margin-bottom:12px;
+        font-size:20px;
+    }
+    &__brief{
+        color:grey;
+        font-size:12px;
+        margin-bottom:12px;
+    }
+    &__chip{        
+        border-radius:32px;
+        border:1px solid #08c;
+        color:#08c;
+        padding:4px 16px;
+        &__icon{
+
+        }
+        &__label{
+
+        }
+    }
+}
+button{
+    text-transform:uppercase;
+    cursor:pointer;
+}
+.btn{
+    background:$primary;
+    border-radius:3px;
+    border:none;
+    padding:8px 16px;
+    color:#fff;
+}
+a{
+    text-decoration:none;
+    color:$primary;
+}
