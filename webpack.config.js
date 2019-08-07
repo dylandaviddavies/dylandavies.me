@@ -30,8 +30,6 @@ module.exports = {
                     }
                 ],
             },
-            // this will apply to both plain `.js` files
-            // AND `<script>` blocks in `.vue` files
             {
                 test: /\.js$/,
                 use: {
@@ -43,8 +41,6 @@ module.exports = {
                 },
                 exclude: /node_modules/
             },
-            // this will apply to both plain `.css` files
-            // AND `<style>` blocks in `.vue` files
             {
                 test: /\.css$/,
                 use: [
