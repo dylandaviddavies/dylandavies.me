@@ -1,5 +1,3 @@
-import { throws } from "assert";
-
 export default class InputContainer{  
     constructor( inputContainer ){
         this._container = inputContainer;
