@@ -26,9 +26,6 @@
     & .input-container__label{
       transform:translate3d(0,-1.4em,0) scale(.8);
     }
-    & .input-container__focus-line{
-      width:100%;
-    }
   }
   &--small{
     width:12em;
@@ -57,14 +54,5 @@
     &:focus{
       outline:none;
     }
-  }
-  &__focus-line{
-    z-index:2;
-    transition:width .3s ease-in-out;
-    width:0;
-    background-color:$white;
-    height:0.05em;
-    position:absolute;
-    bottom:0;
   }
 }
