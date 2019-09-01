@@ -10,6 +10,7 @@
     "@babel/preset-env": "^7.5.5",
     "animate.css": "^3.7.2",
     "babel-loader": "^8.0.6",
+    "bootstrap": "^4.3.1",
     "css-loader": "^2.1.1",
     "express": "^4.17.1",
     "file-loader": "^4.2.0",
@@ -29,7 +30,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",

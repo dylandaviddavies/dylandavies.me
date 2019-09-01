@@ -37,83 +37,107 @@
 </head>
 
 <body class="bg-dark">
-    <main class="main">
-        <div class="hero section">
-        <img src="https://dylandavies.me/dist/logo.png" class="hero__logo">
-        <h1 class="hero__title">Dream Bigger.</h1>
-        <button class="hero__btn next-section-btn">
-          Let's make something great
-          <i class="material-icons" aria-hidden="true">arrow_forward</i>
-        </button>
+  <main class="main">
+    <section class="hero section">
+      <img src="https://dylandavies.me/dist/logo.png" class="hero__logo">
+      <h1 class="hero__title">Dream Bigger.</h1>
+      <button class="hero__btn next-section-btn">
+        Let's make something great
+        <i class="material-icons" aria-hidden="true">arrow_forward</i>
+      </button>
+    </section>
+    <section class="section">
+      <div class="section__header">
+        <h2 class="section__title">My Work</h2>
+        <div class="underline"></div>
       </div>
-      <div class="section">
-        <div class="section__header">
-          <h2 class="section__title">
-            My Services
-          </h2>
-          <div class="underline"></div>
+      <div class="d-flex flex-wrap justify-content-center">        
+        <div class="work">
+          <div class="work__img" style="background-image:url(dist/assets/img/impactful-design.png)"></div>
+          <a href="impactful-design" class="work__a">
+            Impactful Design (Template)
+          </a>
         </div>
-          <div class="services">
-            <div class="service">
-              <i class="material-icons service__icon" aria-hidden="true">devices</i>
-              <h3 class="service__title">Front-End Dev.</h3>
-              <div class="underline" style="width:10%;"></div>
-            </div>
-            <div class="service">
-              <i class="material-icons service__icon" aria-hidden="true">desktop_mac</i>
-              <h3 class="service__title">Mobile Dev.</h3>
-              <div class="underline" style="width:10%;"></div>
-            </div>
-            <div class="service">
-              <i class="material-icons service__icon" aria-hidden="true">build</i>
-              <h3 class="service__title">Back-End Dev.</h3>
-              <div class="underline" style="width:10%;"></div>
-            </div>
-          </div>
-          <button class="hero__btn next-section-btn" style="margin-top:2.5em;">
-            Let's get in touch
-            <i class="material-icons" aria-hidden="true">arrow_forward</i>
-          </button>
+        <div class="work">
+          <div class="work__img" style="background-image:url(dist/assets/img/card-marketplace.png)"></div>
+          <a href="card-marketplace" class="work__a">
+            Card Marketplace (Template)
+          </a>
+        </div>
       </div>
-        <div class="section">
-            <div class="section__header">
-                <h2 class="section__title">Contact</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="content content--phone">
-                <div class="box">
-                    <form action="https://formspree.io/info.dylandavies@gmail.com" method="POST">
-                        <div class="input-container input-container--icon">
-                            <i class="material-icons-outlined input-container__icon">person</i>
-                            <label class="input-container__label" for="name">Name</label>
-                            <input class="input-container__input" name="name" id="name" type="text"
-                                required />
-                        </div>
-                        <div class="input-container input-container--icon">
-                            <i class="material-icons-outlined input-container__icon" aria-hidden="true">email</i>
-                            <label class="input-container__label" for="email">Email</label>
-                            <input class="input-container__input" id="email" name="email"
-                                type="email" required />
-                        </div>
-                        <div class="input-container input-container--icon">
-                            <i class="material-icons-outlined input-container__icon" aria-hidden="true">link</i>
-                            <label class="input-container__label" for="website">Website</label>
-                            <input class="input-container__input" name="website" id="website"
-                                type="url" />
-                        </div>
-                        <div class="input-container input-container--icon">
-                            <i class="material-icons-outlined input-container__icon" aria-hidden="true">comment</i>
-                            <label for="message" class="input-container__label">Message</label>
-                            <textarea class="input-container__input" name="message" id="message" style="width:100%;"></textarea>
-                        </div>
-                        <div style="margin-top:2em;">
-                            <button type="submit" class="btn btn--responsive-block">Submit</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+      <button class="hero__btn next-section-btn" style="margin-top:2.5em;">
+        Check out my services
+        <i class="material-icons" aria-hidden="true">arrow_forward</i>
+      </button>
+    </section>
+    <section class="section">
+      <div class="section__header">
+        <h2 class="section__title">
+          My Services
+        </h2>
+        <div class="underline"></div>
+      </div>
+      <div class="services">
+        <div class="service">
+          <i class="material-icons service__icon" aria-hidden="true">devices</i>
+          <h3 class="service__title">Front-End Dev.</h3>
+          <div class="underline" style="width:10%;"></div>
         </div>
-      </main>
+        <div class="service">
+          <i class="material-icons service__icon" aria-hidden="true">desktop_mac</i>
+          <h3 class="service__title">Mobile Dev.</h3>
+          <div class="underline" style="width:10%;"></div>
+        </div>
+        <div class="service">
+          <i class="material-icons service__icon" aria-hidden="true">build</i>
+          <h3 class="service__title">Back-End Dev.</h3>
+          <div class="underline" style="width:10%;"></div>
+        </div>
+      </div>
+      <button class="hero__btn next-section-btn" style="margin-top:2.5em;">
+        Let's get in touch
+        <i class="material-icons" aria-hidden="true">arrow_forward</i>
+      </button>
+    </section>
+    <section class="section">
+      <div class="section__header">
+        <h2 class="section__title">Contact</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="content content--phone">
+        <div class="box">
+          <form action="https://formspree.io/info.dylandavies@gmail.com" method="POST">
+              <div class="input-container input-container--icon">
+                <i class="material-icons-outlined input-container__icon">person</i>
+                <label class="input-container__label" for="name">Name</label>
+                <input class="input-container__input" name="name" id="name" type="text"
+                    required />
+              </div>
+              <div class="input-container input-container--icon">
+                <i class="material-icons-outlined input-container__icon" aria-hidden="true">email</i>
+                <label class="input-container__label" for="email">Email</label>
+                <input class="input-container__input" id="email" name="email"
+                    type="email" required />
+              </div>
+              <div class="input-container input-container--icon">
+                <i class="material-icons-outlined input-container__icon" aria-hidden="true">link</i>
+                <label class="input-container__label" for="website">Website</label>
+                <input class="input-container__input" name="website" id="website"
+                    type="url" />
+              </div>
+              <div class="input-container input-container--icon">
+                <i class="material-icons-outlined input-container__icon" aria-hidden="true">comment</i>
+                <label for="message" class="input-container__label">Message</label>
+                <textarea class="input-container__input" name="message" id="message" style="width:100%;"></textarea>
+              </div>
+              <div style="margin-top:2em;">
+                <button type="submit" class="btn btn--responsive-block">Submit</button>
+              </div>
+          </form>
+        </div>
+      </div>
+      </section>
+    </main>
     <script src="dist/bundle.min.js?v=13"></script>
 </body>
 

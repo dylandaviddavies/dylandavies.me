@@ -9,6 +9,5 @@ $secondary: #150d1c;
 $white:#fff;
 $breakpoint-phone: 480px;
 $breakpoint-tablet: 767px;
-$breakpoint-desktop: 1023px;
-$primary-gradient:linear-gradient(15deg, $secondary, $primary);
+$breakpoint-desktop: 992px;
 @import '../modules/mixins';
