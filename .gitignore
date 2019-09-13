@@ -10,3 +10,4 @@ storage.rules
 firestore.indexes.json
 functions/serviceAccountKey.json
 database.rules.json
+.vscode/settings.json
