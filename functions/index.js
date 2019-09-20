@@ -17,12 +17,12 @@ app.set("views", "./views");
 app.set("view engine", 'hbs');
 app.get('/', (req, res) => {
     let assets = {
-        path: "dist/index/assets/",
+        path: "/dist/index/assets/",
         css:[
-            "dist/index/assets/css/bundle.min.css"
+            "/dist/index/assets/css/bundle.min.css"
         ],
         js:[
-            "dist/index/assets/js/bundle.min.js"
+            "/dist/index/assets/js/bundle.min.js"
         ]
     };
     res.render("index", {
@@ -49,12 +49,12 @@ app.get('/', (req, res) => {
 app.get('/design1', (req, res) => {
     res.render("design1", {        
         assets:{
-            path: "dist/design1/assets/",
+            path: "/dist/design1/assets/",
             css:[
-                "dist/design1/assets/css/bundle.min.css"
+                "/dist/design1/assets/css/bundle.min.css"
             ],
             js:[
-                "dist/design1/assets/js/bundle.min.js",
+                "/dist/design1/assets/js/bundle.min.js",
                 "https://kit.fontawesome.com/2c7ccbb05b.js"
             ]
         }
@@ -63,12 +63,12 @@ app.get('/design1', (req, res) => {
 app.get('/design2', (req, res) => {
     res.render("design2", {        
         assets:{
-            path: "dist/design2/assets/",
+            path: "/dist/design2/assets/",
             css:[
-                "dist/design2/assets/css/bundle.min.css"
+                "/dist/design2/assets/css/bundle.min.css"
             ],
             js:[
-                "dist/design2/assets/js/bundle.min.js",
+                "/dist/design2/assets/js/bundle.min.js",
                 "https://kit.fontawesome.com/2c7ccbb05b.js"
             ]
         }
@@ -77,12 +77,12 @@ app.get('/design2', (req, res) => {
 app.get('/design3', (req, res) => {
     res.render("design3", {        
         assets:{
-            path: "dist/design3/assets/",
+            path: "/dist/design3/assets/",
             css:[
-                "dist/design3/bundle.min.css"
+                "/dist/design3/assets/css/bundle.min.css"
             ],
             js:[
-                "dist/design3/bundle.min.js"
+                "/dist/design3/assets/js/bundle.min.js"
             ]
         }
     });
