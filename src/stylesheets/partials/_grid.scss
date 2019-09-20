@@ -1,0 +1,11 @@
+@each $name, $value in $grid-breakpoints {
+    .dd-bp-max-#{$name}{   
+      @each $k, $v in $grid-breakpoints{
+        @if (index(($grid-breakpoints), ($k $v)) > index(($grid-breakpoints), ($name $value))) {
+          @media (min-width: $v) {
+            max-width:$value;
+          }
+        }
+      }
+    }
+  }

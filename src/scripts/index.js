@@ -1,9 +1,13 @@
+import 'bootstrap';
 import * as $ from 'jquery';
 require('../stylesheets/index.scss');
 import DdInputContainer from "./modules/InputContainer";
-document.querySelectorAll(".input-container").forEach(ic => new DdInputContainer(ic));
-$(document).on("click", ".next-section-btn", function(){
-    $('html,body').animate({
-        scrollTop: $(this).parents(".section").next().offset().top},
-        'slow');
-});
+$(() => $(".input-container").each((i,e) => new DdInputContainer(e)));
+$(() => $(".dd-scroll-to").click(e => {
+    e.preventDefault();
+    let $this = $(e.target);
+    let target = $this.attr("href") || $this.data("target");
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $(target).offset().top
+    }, 1000);
+}));

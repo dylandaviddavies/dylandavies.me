@@ -1,14 +1,15 @@
 const path = require("path");
+const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 module.exports = {
     mode: 'production',
     entry: {
-        "../public/dist/bundle.min.js": "./src/scripts/index.js"
+        "../public/dist/index/assets/": "./src/scripts/index.js"
     },
     output: {
         path: path.resolve(__dirname, 'dist/'),
-        filename: "[name]"
+        filename: "[name]/js/bundle.min.js"
     },
     module: {
         rules: [
@@ -23,25 +24,20 @@ module.exports = {
                         }
                     },
                     {
+                        loader:'postcss-loader',
+                        options: {
+                            plugins: () => [autoprefixer({
+                                grid:true
+                            })]
+                        }
+                    },
+                    {
                         loader: 'sass-loader',
                         options: {
                             includePaths: ['./node_modules']
                         },
                     }
                 ],
-            },
-            {                 
-                test: /\.(png|jpg|gif|svg)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[path][name].[ext]',
-                            context: path.resolve(__dirname, "src/"),
-                            outputPath: ''
-                        }
-                    }
-                ] 
             },
             {
                 test: /\.js$/,
@@ -64,8 +60,8 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "[name].css",
-            chunkFilename: "[name].css"
+            filename: "[name]/css/bundle.min.css",
+            chunkFilename: "[id].css"
         }),
         new OptimizeCSSAssetsPlugin({})
     ]

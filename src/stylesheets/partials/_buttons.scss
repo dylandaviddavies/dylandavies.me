@@ -1,0 +1,56 @@
+.dd-btn{
+    position:relative;
+    box-sizing:border-box;
+    z-index:0;
+    background:none;
+    border:2px solid $white;
+    color:$white;
+    overflow:hidden;
+    padding:.965em 3.5em;
+    font-weight:500;
+    transition:color .3s cubic-bezier(0.75, 0, 0.125, 1);
+    &--lg{
+      padding:.975em 3.5em;
+      font-size:1.2em;
+      @include media-breakpoint-up(md){
+        font-size:1.5em;
+      }
+    }
+    &:before{
+      content:'';
+      font-feature-settings: 'liga';
+      font-weight:500;
+      font-size:1.3em;
+      position: absolute;
+      height: 100%;
+      box-sizing:border-box;
+      width: 100%;
+      bottom: 100%;
+      background-color:$white;
+      display:flex;
+      justify-content:flex-end;
+      padding-right:.95em;
+      align-items:center;
+      left: 0;
+      z-index: -1;
+      transition: transform 0.3s cubic-bezier(0.75, 0, 0.125, 1);
+    }
+    &--arrow_downward{      
+      &:before{
+        content:'arrow_downward';
+        font-family:'Material Icons', serif;
+      }
+    }
+    &--done{      
+      &:before{
+        content:'done';
+        font-family:'Material Icons', serif;
+      }
+    }
+    &:hover,&:focus,&:active{
+      color:$black;
+      &:after,&:before{        
+        transform: translate3d(0, 100%, 0);
+      }
+    }
+}
