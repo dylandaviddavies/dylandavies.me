@@ -10,9 +10,6 @@
       <li class="nav-item">
         <a class="nav-link dd-scroll-to" href="#skills">Skills</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link dd-scroll-to" href="#work">Work</a>
-      </li>
       <li class="nav-item ml-sm-3">
         <a class="nav-link nav-link--outline dd-scroll-to" href="#contact">Contact</a>
       </li>
@@ -31,9 +28,9 @@
   <section id="skills" class="bg-secondary py-6 d-flex flex-column min-vh-100 vw-100">
     <h2 class="text-uppercase text-center">Skills</h2>
     <div class="flex-grow-1 flex-column d-flex justify-content-center align-items-center">
-      <div class="container-fluid">
+      <div class="my-3 container-fluid">
         <div class="row">
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-sm-4">
             <div class="dd-skill">
               <div class="dd-skill__icon">
                 <i class="material-icons" aria-hidden="true">devices</i>
@@ -42,7 +39,7 @@
               <div class="dd-skill__underline"></div>
             </div>
           </div>
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-sm-4">
             <div class="dd-skill">
               <div class="dd-skill__icon">
                 <i class="material-icons" aria-hidden="true">phone_iphone</i>
@@ -51,7 +48,7 @@
               <div class="dd-skill__underline"></div>
             </div>
           </div>
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-sm-4">
             <div class="dd-skill">
               <div class="dd-skill__icon">
                 <i class="material-icons">build</i>
@@ -61,19 +58,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <button class="dd-btn dd-btn--arrow_downward dd-btn--lg dd-scroll-to" data-target="#work">
-        Check out my work
-      </button>
-    </div>
-  </section>
-  <section id="work" class="bg-primary py-6 d-flex flex-column min-vh-100 vw-100">
-    <h2 class="text-uppercase text-center">Work</h2>
-    <div class="flex-grow-1 flex-column d-flex justify-content-center align-items-center">
-      <div class="dd-work-grid my-5 my-lg-6">
-        {{#each works}}
-          <a class="dd-work" href="{{href}}" target="_blank" style="background-image:url({{bg}})"></a>
-        {{/each}}
       </div>
       <button class="dd-btn dd-btn--arrow_downward dd-btn--lg dd-scroll-to" data-target="#contact">
         Let's get in touch

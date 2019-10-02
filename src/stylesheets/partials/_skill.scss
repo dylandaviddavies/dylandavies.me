@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 2rem 0;
+    margin: 1rem 0;
     @include media-breakpoint-up(md){
       margin: 6rem 0;
     }
@@ -14,7 +14,13 @@
       border-radius: 100%;    
       width: 1.8em;
       height: 1.8em;
-      font-size: 8em;
+      font-size: 3.5em;
+      @include media-breakpoint-up(sm){
+        font-size: 6em;
+      }
+      @include media-breakpoint-up(md){
+        font-size: 8em;
+      }
       @include media-breakpoint-up(lg){
         font-size: 10em;
       }
@@ -23,13 +29,22 @@
       }
     }
     &__underline{
-      height:4px;
+      height:1px;
+      @include media-breakpoint-up(sm){
+        height:4px;
+      }
       border-radius:32px;
       background-color:$white;
       width:60px;
     }
     &__title{
-      font-size: 2em;
+      font-size: 1em;
+      @include media-breakpoint-up(sm){
+        font-size: 1.8em;
+      }
+      @include media-breakpoint-up(md){
+        font-size: 2em;
+      }
       text-align: center;
       margin: 1em 0;
     }

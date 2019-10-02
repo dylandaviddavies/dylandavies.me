@@ -1,6 +1,7 @@
 .dd-navbar{
     background-color:transparent;
     transition:background-color .2s ease-in-out;
+    box-sizing:border-box;
     a.nav-link{
       color:$white;
       text-transform:uppercase;

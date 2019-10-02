@@ -10,7 +10,7 @@ app.engine('hbs', hbs({
     extname       : '.hbs',
     layoutsDir    : __dirname +'/views/layouts',
     helpers:{
-        "seed": () => "1231kjdawdawkdb"
+        "seed": () => "198263910327"
     }
 }));
 app.set("views", "./views");
@@ -26,24 +26,7 @@ app.get('/', (req, res) => {
         ]
     };
     res.render("index", {
-        assets,
-        works: [
-            {
-                name: "Design 3",
-                bg: assets.path + "/img/design3.png",
-                href:"/design3"
-            },
-            {
-                name: "Design 2",
-                bg: assets.path + "/img/design2.png",
-                href:"/design2"
-            },
-            {
-                name: "Design 1",
-                bg: assets.path + "/img/design1.png",
-                href:"/design1"
-            },
-        ]
+        assets
     });
 });
 app.get('/design1', (req, res) => {
