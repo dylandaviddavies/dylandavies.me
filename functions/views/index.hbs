@@ -1,100 +1,102 @@
 <nav class="dd-navbar navbar fixed-top navbar-expand-sm">
-  <a class="navbar-brand dd-scroll-to" href="#hero">
-      <img src="{{assets.path}}/img/logo.png" style="max-height:50px;pointer-events:none;" alt="Dylan Davies - Full Stack Developer" />
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link dd-scroll-to" href="#skills">Skills</a>
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item mx-sm-3">
+        <a class="nav-link dd-scroll-to text-uppercase font-weight-bold letter-spacing-half" href="#home">Home</a>
       </li>
-      <li class="nav-item ml-sm-3">
-        <a class="nav-link nav-link--outline dd-scroll-to" href="#contact">Contact</a>
+      <li class="nav-item mx-sm-3">
+        <a class="nav-link dd-scroll-to text-uppercase font-weight-bold letter-spacing-half" href="#about">About</a>
+      </li>
+      <li class="nav-item mx-sm-3">
+        <a class="nav-link dd-scroll-to text-uppercase font-weight-bold letter-spacing-half" href="#contact">Contact</a>
       </li>
     </ul>
   </div>
 </nav>
 <main>
-  <section id="hero" class="d-flex flex-column justify-content-center">
-    <div class="d-flex bg-primary p-3 align-items-center flex-column justify-content-center min-vh-100 vw-100">
-      <h1 class="text-center my-5">Dream Bigger.</h1>
-      <button class="dd-btn dd-btn--arrow_downward dd-btn--lg dd-scroll-to" data-target="#skills">
+  <section id="home" class="d-flex flex-column justify-content-center">
+    <div class="d-flex p-3 align-items-center flex-column justify-content-center min-vh-100 vw-100">
+      <h3 class="text-center my-5">
+          Hi, I'm <span class="font-weight-bold">Dylan Davies</span>.
+          <br />
+          I'm a full stack developer.
+      </h3>
+      <button class="dd-btn dd-btn--arrow_downward dd-btn--lg dd-scroll-to" data-target="#about">
         Let's make something great
       </button>
     </div>
   </section>
-  <section id="skills" class="bg-secondary py-6 d-flex flex-column min-vh-100 vw-100">
-    <h2 class="text-uppercase text-center">Skills</h2>
-    <div class="flex-grow-1 flex-column d-flex justify-content-center align-items-center">
-      <div class="my-3 container-fluid">
-        <div class="row">
-          <div class="col-12 col-sm-4">
-            <div class="dd-skill">
-              <div class="dd-skill__icon">
-                <i class="material-icons" aria-hidden="true">devices</i>
-              </div>
-              <h4 class="dd-skill__title">Front-end Dev.</h4>
-              <div class="dd-skill__underline"></div>
-            </div>
+  <section id="about" class="py-6 d-flex flex-column align-items-center min-vh-100 vw-100">
+    <h2 class="text-uppercase font-weight-bold text-center" data-aos="fade-right">About</h2>
+    <div class="dd-header-bar dd-header-bar--lg mx-auto" data-aos="fade-right" data-aos-delay="250"></div>
+    <div class="my-4 my-sm-6 container">
+      <div class="row">
+        <div class="col-12 col-sm-6 mb-2 mb-sm-0 justify-content-sm-center d-flex">
+          <div>
+            <h4 class="font-weight-bold" data-aos="fade-right" data-aos-delay="400">Need help bringing your idea to life?</h4>
+            <p class="my-2" data-aos="fade-right" data-aos-delay="500">
+              I'm comfortable working in all areas of the technical stack, so my skills and interests are broad. I live to solve problems.
+            </p>
+            <p class="my-2" data-aos="fade-right" data-aos-delay="600">
+              I'm open for remote work so please feel free to <a class="font-weight-bold dd-scroll-to" href="#contact">contact me</a>.
+            </p>
           </div>
-          <div class="col-12 col-sm-4">
-            <div class="dd-skill">
-              <div class="dd-skill__icon">
-                <i class="material-icons" aria-hidden="true">phone_iphone</i>
-              </div>
-              <h4 class="dd-skill__title">Mobile Dev.</h4>
-              <div class="dd-skill__underline"></div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-4">
-            <div class="dd-skill">
-              <div class="dd-skill__icon">
-                <i class="material-icons">build</i>
-              </div>
-              <h4 class="dd-skill__title">Back-end Dev.</h4>
-              <div class="dd-skill__underline"></div>
-            </div>
+        </div>
+        <div class="col-12 col-sm-6 justify-content-sm-center d-flex">
+          <div>
+            <h4 class="font-weight-bold mb-1" data-aos="fade-left" data-aos-delay="400">Skills</h4>
+            <div class="dd-header-bar dd-header-bar--sm mb-3" data-aos="fade-left" data-aos-delay="500"></div>
+            <dl>
+              <dt class="font-weight-bold" data-aos="fade-left" data-aos-delay="600">Front-end</dt>
+                <dd class="mb-2" data-aos="fade-left" data-aos-delay="700">CSS3, JavaScript, ES6, React, Vue, HTML5</dd>
+              <dt class="font-weight-bold" data-aos="fade-left" data-aos-delay="800">Back-end</dt>
+                <dd class="mb-2" data-aos="fade-left" data-aos-delay="900">Java, Node.js, ASP.NET, C#, PHP, Python, SQL, MySQL</dd>
+              <dt class="font-weight-bold" data-aos="fade-left" data-aos-delay="1200">Cloud</dt>
+                <dd class="mb-2" data-aos="fade-left" data-aos-delay="1300">Firebase, Azure</dd>
+            </dl>
           </div>
         </div>
       </div>
-      <button class="dd-btn dd-btn--arrow_downward dd-btn--lg dd-scroll-to" data-target="#contact">
-        Let's get in touch
-      </button>
     </div>
+    <button class="dd-btn dd-btn--arrow_downward dd-btn--lg dd-scroll-to" data-aos="fade-left" data-aos-delay="1400" data-target="#contact">
+      Let's get in touch
+    </button>
   </section>
-  <section id="contact" class="bg-secondary py-6 d-flex flex-column min-vh-100 vw-100">
-    <h2 class="text-uppercase text-center">Contact</h2>
+  <section id="contact" class="py-6 d-flex flex-column vw-100" style="min-height:70vh;">
+    <h2 class="text-uppercase font-weight-bold text-center" data-aos="fade-left">Contact</h2>
+    <div class="dd-header-bar dd-header-bar--lg mb-3 mx-auto" data-aos="fade-left" data-aos-delay="500"></div>
     <div class="flex-grow-1 flex-column d-flex justify-content-center align-items-center">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-12 col-lg-8">
             <form action="https://formspree.io/info.dylandavies@gmail.com" method="POST">
-                <div class="input-container input-container--icon">
+                <div class="input-container input-container--icon" data-aos="fade-left" data-aos-delay="600">
                   <i class="material-icons input-container__icon">person</i>
                   <label class="input-container__label" for="name">Name</label>
                   <input class="input-container__input" name="name" id="name" type="text"
                       required />
                 </div>
-                <div class="input-container input-container--icon">
+                <div class="input-container input-container--icon" data-aos="fade-left" data-aos-delay="700">
                   <i class="material-icons input-container__icon" aria-hidden="true">email</i>
                   <label class="input-container__label" for="email">Email</label>
                   <input class="input-container__input" id="email" name="email"
                       type="email" required />
                 </div>
-                <div class="input-container input-container--icon">
+                <div class="input-container input-container--icon" data-aos="fade-left" data-aos-delay="800">
                   <i class="material-icons input-container__icon" aria-hidden="true">link</i>
                   <label class="input-container__label" for="website">Website</label>
                   <input class="input-container__input" name="website" id="website"
                       type="url" />
                 </div>
-                <div class="input-container input-container--icon">
+                <div class="input-container input-container--icon" data-aos="fade-left" data-aos-delay="900">
                   <i class="material-icons input-container__icon" aria-hidden="true">comment</i>
                   <label for="message" class="input-container__label">Message</label>
                   <textarea rows="1" class="input-container__input" name="message" id="message" style="width:100%;"></textarea>
                 </div>
-                <div>
+                <div data-aos="fade-left" data-aos-delay="1000">
                   <button class="dd-btn dd-btn--done">
                     Submit
                   </button>
@@ -106,3 +108,22 @@
     </div>
   </section>
 </main>
+<footer class="dd-footer bg-black position-relative">
+  <svg class="position-absolute" style="top:-1px;left:0;" preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0 L50 100 L100 0 Z" fill="white" stroke="white"></path>
+  </svg>
+  <div class="pt-5 pb-5 position-relative z-index-1">
+    <a class="mx-auto dd-back-up-btn dd-scroll-to" href="#home">
+      <i class="fas fa-angle-double-up"></i>
+    </a>
+    <div class="d-flex mt-5 mb-4 justify-content-center">
+      <a class="dd-icon-btn text-grey mx-3" href="https://www.linkedin.com/in/dylandaviddavies/" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a class="dd-icon-btn text-grey mx-3" href="https://github.com/dylandaviddavies" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <p class="text-center text-uppercase letter-spacing-1" style="font-size:.8em;">Dylan Davies @2019</p>
+  </div>
+</footer>

@@ -10,7 +10,7 @@ app.engine('hbs', hbs({
     extname       : '.hbs',
     layoutsDir    : __dirname +'/views/layouts',
     helpers:{
-        "seed": () => "198263910327"
+        "seed": () => "098023476716319"
     }
 }));
 app.set("views", "./views");
@@ -22,39 +22,13 @@ app.get('/', (req, res) => {
             "/dist/index/assets/css/bundle.min.css"
         ],
         js:[
-            "/dist/index/assets/js/bundle.min.js"
+            "/dist/index/assets/js/bundle.min.js",
+            "https://kit.fontawesome.com/2c7ccbb05b.js"
         ]
     };
     res.render("index", {
-        assets
-    });
-});
-app.get('/design1', (req, res) => {
-    res.render("design1", {        
-        assets:{
-            path: "/dist/design1/assets/",
-            css:[
-                "/dist/design1/assets/css/bundle.min.css"
-            ],
-            js:[
-                "/dist/design1/assets/js/bundle.min.js",
-                "https://kit.fontawesome.com/2c7ccbb05b.js"
-            ]
-        }
-    });
-});
-app.get('/design2', (req, res) => {
-    res.render("design2", {        
-        assets:{
-            path: "/dist/design2/assets/",
-            css:[
-                "/dist/design2/assets/css/bundle.min.css"
-            ],
-            js:[
-                "/dist/design2/assets/js/bundle.min.js",
-                "https://kit.fontawesome.com/2c7ccbb05b.js"
-            ]
-        }
+        assets,
+        hotjar:true
     });
 });
 app.get('/design3', (req, res) => {

@@ -3,7 +3,7 @@
   padding-top:1em;
   margin:1.5em 0;
   max-width:100%;
-  color:$white;
+  color:$black;
   &__icon{
     padding:0.1em 0.1em;
     box-sizing:border-box;
@@ -48,7 +48,7 @@
     box-sizing:border-box;
     border-bottom:0.05em solid $grey;
     width:100%;
-    color:$white;
+    color:$black;
     &:focus{
       outline:none;
     }

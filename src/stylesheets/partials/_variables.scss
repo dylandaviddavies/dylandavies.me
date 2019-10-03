@@ -1,12 +1,17 @@
 $white: #fff;
-$black:#333;
-$grey:#e4e4e4;
-$primary:#110818;
-$secondary: #150d1c;
-
-$body-bg: $primary;
+$black:black;
+$grey:#8F9AA7;
+$primary:$black;
+$secondary: #fb6969;
 
 $spacer: 1rem !default;
 $spacers:(
-    6: ($spacer * 6)
+    6: ($spacer * 6),
+    7: ($spacer * 7),
+    8: ($spacer * 8)
+);
+$letter-spacings: (
+    half: .5px,
+    1: 1px,
+    2: 2px
 );

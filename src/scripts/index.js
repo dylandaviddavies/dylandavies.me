@@ -1,13 +1,18 @@
 import 'bootstrap';
 import * as $ from 'jquery';
+import AOS from 'aos';
 require('../stylesheets/index.scss');
 import DdInputContainer from "./modules/InputContainer";
 $(() => $(".input-container").each((i,e) => new DdInputContainer(e)));
-$(() => $(".dd-scroll-to").click(e => {
-    e.preventDefault();
-    let $this = $(e.target);
+$(document).on("click",".dd-scroll-to", function(){
+    let $this = $(this).closest(".dd-scroll-to");
     let target = $this.attr("href") || $this.data("target");
     $([document.documentElement, document.body]).animate({
         scrollTop: $(target).offset().top
     }, 1000);
-}));
+});
+AOS.init({
+    duration:900,
+    once: true,
+    disable: 'mobile'
+});

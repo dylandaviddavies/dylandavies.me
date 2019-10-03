@@ -4,31 +4,20 @@ $header-font-family: "Montserrat", sans-serif;
 body,button,input,select,form,tr,td,table{
     font-family:$font-family;
 }
-h1{    
-    font-family:$header-font-family;
-    font-size: 6em;
-    @include media-breakpoint-up(md){
-        font-size: 8em;
-    }
-    @include media-breakpoint-up(lg){
-        font-size: 12em;
-    }
-}
 @for $i from 1 through 6 {
     h#{7 - $i} {
         line-height:1.5em;
     }
 }
-@for $i from 1 through 5 {
+@for $i from 1 through 6 {
     h#{7 - $i} {
-        font-size: $i * .6em;
+        font-size: $i * .5em;
         @include media-breakpoint-up(md){
             font-size: $i * .7em;
         }
     }
 }
 body{
-    color:$white;
     font-size:12px;
     @include media-breakpoint-up(md){
         font-size:14px;
@@ -36,4 +25,12 @@ body{
 }
 body,button{    
     line-height:1.5em;
+}
+@each $k, $v in $letter-spacings {
+    .letter-spacing-#{$k}{
+      letter-spacing: $v !important;
+    }
+}
+.font-weight-black{
+    font-weight:900 !important;
 }
