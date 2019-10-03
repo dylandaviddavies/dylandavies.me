@@ -3,27 +3,11 @@
         "partials/inputContainers",
         "partials/nav",
         "partials/reboot",
-        "partials/buttons",
-        "partials/skill",
+        "partials/buttons",                                              
         "partials/work",
         "partials/block",
         "partials/grid",
         "partials/flex",
+        "partials/footer",
+        "partials/header-bar",
         "partials/background";
-
-.dd-header-bar{
-    background-color:$black;   
-    display:block;
-    &--sm{            
-        height:.15em;
-        width:40px;
-    }
-    &--lg{            
-        width:70px;
-        height:.25em;
-        width:70px;
-    }
-}
-.dd-footer{
-    color:$grey;
-}
