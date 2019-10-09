@@ -4,59 +4,47 @@
     z-index:0;
     background:none;
     overflow:hidden;
+    display:inline-block;
     padding:.965em 3.5em;
     font-weight:600;
     transition:color .3s cubic-bezier(0.75, 0, 0.125, 1);
     border:2px solid $black;
     color:$black;
-    &:before{
-      background-color:$black;
-      content:'';
-      font-feature-settings: 'liga';
-      font-weight:500;
-      font-size:1.3em;
-      position: absolute;
-      height: 100%;
-      box-sizing:border-box;
-      width: 100%;
-      bottom: 100%;
-      display:flex;
-      justify-content:flex-end;
-      padding-right:.95em;
-      align-items:center;
-      left: 0;
-      z-index: -1;
-      transition: transform 0.3s cubic-bezier(0.75, 0, 0.125, 1);
-    }
-    &:hover,&:focus,&:active{
-      color:$white;
-      &:after,&:before{        
-        transform: translate3d(0, 100%, 0);
-      }
-    }
-    &--white{
-      border:2px solid $white;
-      color:$white;
-      &:before{
-        background-color:$white;
-      }
-      &:hover,&:focus,&:active{
-        color:$black;
-      }
+    &--sm{
+      font-size:.8em;
     }
     &--lg{
       font-size:1.2em;
     }
-    &--arrow_downward{      
-      &:before{
-        content:'arrow_downward';
-        font-family:'Material Icons', serif;
-      }
-    }
-    &--done{      
-      &:before{
-        content:'done';
-        font-family:'Material Icons', serif;
+    @each $icon in $button-icons{
+      &--#{$icon}{
+        &:before{
+          font-family:'Material Icons', serif;
+          background-color:$black;
+          content:$icon;
+          font-feature-settings: 'liga';
+          font-weight:500;
+          font-size:1.3em;
+          position: absolute;
+          height: 100%;
+          box-sizing:border-box;
+          width: 100%;
+          bottom: 100%;
+          display:flex;
+          justify-content:flex-end;
+          padding-right:.95em;
+          align-items:center;
+          left: 0;
+          z-index: -1;
+          transition: transform 0.3s cubic-bezier(0.75, 0, 0.125, 1);
+        }
+        @include hover-focus-active{
+          color:$white;
+          text-decoration:none;
+          &:after,&:before{        
+            transform: translate3d(0, 100%, 0);
+          }
+        }
       }
     }
 }
