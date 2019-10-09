@@ -4,17 +4,23 @@ $header-font-family: "Montserrat", sans-serif;
 body,button,input,select,form,tr,td,table{
     font-family:$font-family;
 }
-@for $i from 1 through 6 {
+@for $i from 2 through 6 {
     h#{7 - $i} {
         line-height:1.5em;
     }
 }
-@for $i from 1 through 6 {
+@for $i from 2 through 6 {
     h#{7 - $i} {
         font-size: $i * .5em;
         @include media-breakpoint-up(md){
             font-size: $i * .7em;
         }
+    }
+}
+h6{
+    font-size:.9em;
+    @include media-breakpoint-up(md){
+        font-size: 1em;
     }
 }
 body{
