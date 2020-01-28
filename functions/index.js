@@ -10,38 +10,25 @@ app.engine('hbs', hbs({
     extname       : '.hbs',
     layoutsDir    : __dirname +'/views/layouts',
     helpers:{
-        "seed": () => "09432743297439"
+        "seed": () => "09432743297s39"
     }
 }));
 app.set("views", "./views");
 app.set("view engine", 'hbs');
 app.get('/', (req, res) => {
     let assets = {
-        path: "/dist/index/assets/",
+        path: "/dist/assets/",
         css:[
-            "/dist/index/assets/css/bundle.min.css"
+            "/dist/assets/css/bundle.css"
         ],
         js:[
-            "/dist/index/assets/js/bundle.min.js",
+            "/dist/assets/js/bundle.js",
             "https://kit.fontawesome.com/2c7ccbb05b.js"
         ]
     };
     res.render("index", {
         assets,
         hotjar:true
-    });
-});
-app.get('/design3', (req, res) => {
-    res.render("design3", {        
-        assets:{
-            path: "/dist/design3/assets/",
-            css:[
-                "/dist/design3/assets/css/bundle.min.css"
-            ],
-            js:[
-                "/dist/design3/assets/js/bundle.min.js"
-            ]
-        }
     });
 });
 

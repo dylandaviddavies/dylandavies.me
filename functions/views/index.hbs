@@ -1,24 +1,56 @@
-<nav class="dd-navbar navbar fixed-top navbar-expand-sm">
-  <a class="navbar-brand d-sm-none py-0 d-inline-block dd-scroll-to" href="#hero">	  
-      <img src="{{assets.path}}/img/logodark.png" style="max-height:50px;pointer-events:none;" alt="Dylan Davies - Full Stack Developer" />	
-  </a>
-  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav mx-auto">
-      <li class="nav-item py-2 mx-sm-3">
-        <a class="nav-link dd-scroll-to text-uppercase font-weight-bold letter-spacing-half" href="#home">Home</a>
-      </li>
-      <li class="nav-item py-2 mx-sm-3">
-        <a class="nav-link dd-scroll-to text-uppercase font-weight-bold letter-spacing-half" href="#about">About</a>
-      </li>
-      <li class="nav-item py-2 mx-sm-3">
-        <a class="nav-link dd-scroll-to text-uppercase font-weight-bold letter-spacing-half" href="#contact">Contact</a>
-      </li>
-    </ul>
+<nav class="dd-nav">
+  <div class="dd-nav__content container">
+      <ul class="dd-nav__links">
+          <li>
+              <a href="#home" class="dd-nav__link dd-scroll-to">
+                Home
+              </a>
+          </li>
+          <li>
+              <a href="#about" class="dd-nav__link dd-scroll-to">
+                About
+              </a>
+          </li>
+          <li>
+              <a href="#contact" class="dd-nav__link dd-scroll-to">
+                Contact
+              </a>
+          </li>
+      </ul>
+      <button class="dd-nav__menu dd-shelf__open-btn" type="button" aria-controls="navShelf" aria-expanded="false">
+          <i class="material-icons" aria-hidden="true">menu</i>
+      </button>
   </div>
 </nav>
+<div id="navShelf" class="dd-shelf" aria-hidden="true" aria-label="Sidebar menu">
+    <aside class="dd-shelf__drawer" tabindex="-1">
+        <div class="dd-shelf__drawer__header">
+            <a href="#home" class='dd-shelf__drawer__logo'>
+                <img src="/dist/assets/img/logo.png" alt="Dylan Davies" class="dd-shelf__drawer__img img-fluid" />  
+            </a>          
+            <button class="dd-shelf__close-btn dd-shelf__close" aria-controls="navShelf" aria-expanded="false">
+                <i class="material-icons font-weight-bold" aria-hidden="true">close</i>
+            </button>
+        </div>
+        <ul class="dd-shelf__drawer__body">
+            <li>
+                <a class="dd-shelf__drawer__link dd-scroll-to dd-shelf__close-btn" aria-controls="navShelf" aria-expanded="false" href="#home">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a class="dd-shelf__drawer__link dd-scroll-to dd-shelf__close-btn" aria-controls="navShelf" aria-expanded="false" href="#about">
+                    About
+                </a>
+            </li>
+            <li>
+                <a class="dd-shelf__drawer__link dd-scroll-to dd-shelf__close-btn" aria-controls="navShelf" aria-expanded="false" href="#contact">
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </aside>
+</div>
 <main>
   <section id="home" class="d-flex flex-column justify-content-center">
     <div class="d-flex p-3 align-items-center flex-column justify-content-center min-vh-100 vw-100">
@@ -54,7 +86,7 @@
             <div class="dd-header-bar dd-header-bar--sm mb-3" data-aos="fade-left" data-aos-delay="500"></div>
             <dl>
               <dt class="font-weight-bold" data-aos="fade-left" data-aos-delay="600">Front-end</dt>
-                <dd class="mb-2" data-aos="fade-left" data-aos-delay="700">CSS3, JavaScript, ES6, React, Vue, HTML5</dd>
+                <dd class="mb-2" data-aos="fade-left" data-aos-delay="700">CSS3, JavaScript, ES6, React, Vue.js, Pug, HTML5</dd>
               <dt class="font-weight-bold" data-aos="fade-left" data-aos-delay="800">Back-end</dt>
                 <dd class="mb-2" data-aos="fade-left" data-aos-delay="900">Java, Node.js, ASP.NET, C#, PHP, Python, SQL</dd>
               <dt class="font-weight-bold" data-aos="fade-left" data-aos-delay="1200">Cloud</dt>
@@ -70,7 +102,7 @@
       </a>
     </div>
   </section>
-  <section id="contact" class="py-6 d-flex flex-column vw-100" style="min-height:70vh;">
+  <section id="contact" class="py-6 d-flex flex-column vw-100 mw-100" style="min-height:70vh;">
     <h2 class="text-uppercase font-weight-bold text-center" data-aos="fade-left">Contact</h2>
     <div class="dd-header-bar dd-header-bar--lg mb-3 mx-auto" data-aos="fade-left" data-aos-delay="500"></div>
     <div class="flex-grow-1 flex-column d-flex justify-content-center align-items-center">
@@ -78,28 +110,28 @@
         <div class="row justify-content-center">
           <div class="col-12 col-lg-8">
             <form action="https://formspree.io/info.dylandavies@gmail.com" method="POST">
-                <div class="input-container input-container--icon" data-aos="fade-left" data-aos-delay="600">
-                  <i class="material-icons input-container__icon">person</i>
-                  <label class="input-container__label" for="name">Name</label>
-                  <input class="input-container__input" name="name" id="name" type="text"
+                <div class="dd-input-container dd-input-container--icon" data-aos="fade-left" data-aos-delay="600">
+                  <i class="material-icons dd-input-container__icon">person</i>
+                  <label class="dd-input-container__label" for="name">Name</label>
+                  <input class="dd-input-container__input" name="name" id="name" type="text"
                       required />
                 </div>
-                <div class="input-container input-container--icon" data-aos="fade-left" data-aos-delay="700">
-                  <i class="material-icons input-container__icon" aria-hidden="true">email</i>
-                  <label class="input-container__label" for="email">Email</label>
-                  <input class="input-container__input" id="email" name="email"
+                <div class="dd-input-container dd-input-container--icon" data-aos="fade-left" data-aos-delay="700">
+                  <i class="material-icons dd-input-container__icon" aria-hidden="true">email</i>
+                  <label class="dd-input-container__label" for="email">Email</label>
+                  <input class="dd-input-container__input" id="email" name="email"
                       type="email" required />
                 </div>
-                <div class="input-container input-container--icon" data-aos="fade-left" data-aos-delay="800">
-                  <i class="material-icons input-container__icon" aria-hidden="true">link</i>
-                  <label class="input-container__label" for="website">Website</label>
-                  <input class="input-container__input" name="website" id="website"
+                <div class="dd-input-container dd-input-container--icon" data-aos="fade-left" data-aos-delay="800">
+                  <i class="material-icons dd-input-container__icon" aria-hidden="true">link</i>
+                  <label class="dd-input-container__label" for="website">Website</label>
+                  <input class="dd-input-container__input" name="website" id="website"
                       type="url" />
                 </div>
-                <div class="input-container input-container--icon" data-aos="fade-left" data-aos-delay="900">
-                  <i class="material-icons input-container__icon" aria-hidden="true">comment</i>
-                  <label for="message" class="input-container__label">Message</label>
-                  <textarea rows="1" class="input-container__input" name="message" id="message" style="width:100%;"></textarea>
+                <div class="dd-input-container dd-input-container--icon" data-aos="fade-left" data-aos-delay="900">
+                  <i class="material-icons dd-input-container__icon" aria-hidden="true">comment</i>
+                  <label for="message" class="dd-input-container__label">Message</label>
+                  <textarea rows="1" class="dd-input-container__input" name="message" id="message" style="width:100%;"></textarea>
                 </div>
                 <div data-aos="fade-left" data-aos-delay="1000">
                   <button class="dd-btn dd-btn--done">

@@ -2,19 +2,19 @@
     position:relative;
     box-sizing:border-box;
     z-index:0;
+    text-decoration:none;
     background:none;
     overflow:hidden;
     display:inline-block;
-    padding:.965em 3.5em;
+    padding:14px 46px;
+    font-size:13px;
     font-weight:600;
     transition:color .3s cubic-bezier(0.75, 0, 0.125, 1);
     border:2px solid $black;
     color:$black;
-    &--sm{
-      font-size:.8em;
-    }
     &--lg{
-      font-size:1.2em;
+      padding:16px 48px;
+      font-size:16px;
     }
     @each $icon in $button-icons{
       &--#{$icon}{
@@ -53,6 +53,7 @@
   background-color:#1d1d1d;
   border:none;
   display:block;
+  border-radius: 4px;
   height:55px;
   width:55px;
   display:flex;
@@ -72,6 +73,7 @@
 }
 .dd-back-up-btn{
   color:$white;
+  border-radius:4px;
   background-color:$secondary;
   border:none;
   display:block;

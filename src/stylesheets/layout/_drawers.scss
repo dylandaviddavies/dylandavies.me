@@ -1,0 +1,103 @@
+.dd-shelf {
+    $self: &;
+    position:fixed;
+    z-index:20;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    &__close {
+        background:none;
+        position: absolute;
+        color:$white;
+        border:none;
+        left: 16px
+    }
+    &__drawer{
+        background-color: #151515;
+        z-index:21;
+        opacity: 0;
+        position:absolute;
+        box-shadow: 0 0 20px rgba(0,0,0,.3);
+        top:0;
+        left:0;
+        height:100%;
+        transition: transform .4s, opacity 0s linear .4s;
+        width:100%;
+        @include media-breakpoint-down(sm){            
+            transform: translateX(-100%);
+        }
+        @include media-breakpoint-up(md){     
+            transform: translateX(-100%);
+            width:45%;
+        }
+        &__link {
+            text-align:center;
+            display:block;
+            color: $white;
+            font-weight:500;
+            letter-spacing:4px;
+            text-transform:uppercase;
+            font-size:18px;
+            padding: 16px 16px;
+            transition: background-color .2s;
+            @include hover-focus-active {
+                background-color: darken(#151515, 5%);
+                color:$white;
+            }
+        }
+        &__body {
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            height:100%;
+            padding: 55px 24px;
+        }
+        &__header{        
+            justify-content:center;
+            height: 55px;
+            width:100%;
+            display:flex;
+            align-items:center;
+            position:absolute;
+            top:0;
+        }
+        &__logo{
+            @extend 
+                .d-flex,
+                .align-items-center,
+                .h-100,
+                .d-inline-block;
+            img {
+                height:80%;
+            }
+        }
+    }
+    &:before{
+        content:"";
+        opacity:0;
+        position:absolute;
+        width:100%;
+        height:100%;
+        background-color:$black;
+        transition: opacity .4s;
+    }
+    &--visible{
+        pointer-events:auto;
+        &:before{
+            opacity:.5;
+        }
+        #{$self}__drawer{
+            transition: transform .4s;
+            opacity: 1;
+            @include media-breakpoint-down(sm){
+                transform: translateY(0);
+            }
+            @include media-breakpoint-up(md){
+                transform: translateX(0);
+            }
+        }
+    }
+}

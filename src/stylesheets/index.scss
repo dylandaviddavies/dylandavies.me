@@ -1,13 +1,17 @@
-@import "partials/base",
-        '~aos/dist/aos',
-        "partials/inputContainers",
-        "partials/nav",
-        "partials/reboot",
-        "partials/buttons",                                              
-        "partials/work",
-        "partials/block",
-        "partials/grid",
-        "partials/flex",
-        "partials/footer",
-        "partials/header-bar",
-        "partials/background";
+@import 
+    'abstracts/variables',
+    'abstracts/mixins',
+    
+    'vendors/all',
+
+    'base/reboot',
+    'base/typography',
+    'base/utilities',
+
+    'layout/navigation',
+    'layout/footer',
+    "layout/drawers",
+
+    'components/buttons',
+    'components/header-bar',
+    'components/inputContainers';

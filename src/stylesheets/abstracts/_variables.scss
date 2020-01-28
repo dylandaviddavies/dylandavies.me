@@ -20,3 +20,13 @@ $button-icons:
     'arrow_downward',
     'arrow_forward',
     'done';
+
+// Navigation
+$navbar-height: 55px;
+$navbar-md-height: 65px;
+
+$text-shadows: (
+    none: none,
+    stylish: .05em .05em rgba(0,0,0,.2),
+    sharpen: .01em .01em rgba(0,0,0,.3)
+);

@@ -11,3 +11,5 @@ firestore.indexes.json
 functions/serviceAccountKey.json
 database.rules.json
 .vscode/settings.json
+public/dist/assets/css/bundle.css
+public/dist/assets/js/bundle.js
