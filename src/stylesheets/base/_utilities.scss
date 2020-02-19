@@ -76,3 +76,34 @@
   overflow:hidden;
   padding-right:17px;
 }
+
+
+
+@each $k, $v in $directions {
+  @each $k2, $v2 in $direction-values {
+      .#{$k}-#{$k2} {
+          #{$v}: $v2 !important;
+      }
+  }
+}
+
+.w-101{
+  width:101%;
+}
+
+@each $k, $v in $text-shadows {
+  .text-shadow-#{$k} {
+      text-shadow: $v !important;
+  }
+}
+
+
+@each $k, $v in $z-indexes {
+  .zi-#{$k} {
+      z-index: $v !important;
+  }
+}
+
+.rotate-180{
+  transform: rotate(180deg);
+}

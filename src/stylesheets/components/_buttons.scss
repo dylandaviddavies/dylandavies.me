@@ -5,16 +5,20 @@
     text-decoration:none;
     background:none;
     overflow:hidden;
+    text-align:center;
     display:inline-block;
     padding:14px 46px;
     font-size:13px;
     font-weight:600;
-    transition:color .3s cubic-bezier(0.75, 0, 0.125, 1);
+    transition:color .5s cubic-bezier(0.75, 0, 0.125, 1);
     border:2px solid $black;
     color:$black;
     &--lg{
       padding:16px 48px;
-      font-size:16px;
+      font-size:14px;
+      @include media-breakpoint-up(md){    
+        font-size:16px;
+      }
     }
     @each $icon in $button-icons{
       &--#{$icon}{
@@ -36,7 +40,7 @@
           align-items:center;
           left: 0;
           z-index: -1;
-          transition: transform 0.3s cubic-bezier(0.75, 0, 0.125, 1);
+          transition: transform 0.5s cubic-bezier(0.75, 0, 0.125, 1);
         }
         @include hover-focus-active{
           color:$white;
@@ -73,21 +77,21 @@
 }
 .dd-back-up-btn{
   color:$white;
-  border-radius:4px;
-  background-color:$secondary;
+  border-radius:100%;
+  background-color:#1d1d1d;
   border:none;
   display:block;
   height:55px;
   width:55px;
   display:flex;
-  box-shadow:0px 0px 5px transparentize($secondary,.2);
+  box-shadow:0px 0px 5px transparentize(#1d1d1d,.2);
   justify-content:center;
   align-items:center;
   font-size:30px;
   text-align:center;
   transition: all .2s ease-in-out;
   @include hover-focus-active{
-    box-shadow:0px 0px 10px $secondary;
+    box-shadow:0px 0px 10px #1d1d1d;
     text-decoration:none;
     color:$white;
     transform:scale(.9);

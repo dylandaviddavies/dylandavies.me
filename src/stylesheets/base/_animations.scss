@@ -1,0 +1,27 @@
+@keyframes wave {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -1600px 0;
+    }
+}
+
+.dd-animated-wave {   
+    position:relative;
+    overflow:hidden; 
+    &--padded {        
+        padding-bottom: 20vh !important;
+    }
+    &__wave {
+        background-repeat: repeat-x;
+        background-position:bottom;
+        height:20vh;
+        width:101%;
+        position:absolute;
+        left:-1px;
+        right:-1px;
+        animation: wave 25s linear infinite;
+        bottom:-10px;
+    }
+}

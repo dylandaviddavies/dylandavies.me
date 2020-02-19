@@ -3,6 +3,9 @@ body{
 }
 a {
     text-decoration:none;
+    &:active {
+        color:darken($primary, 10%);
+    }
 }
 body,html {
     margin:0;
@@ -22,4 +25,10 @@ ul {
 dd {
     margin:0;
     padding:0;
+}
+
+@include hover-focus-active {
+    *{
+        outline:none !important;
+    }
 }

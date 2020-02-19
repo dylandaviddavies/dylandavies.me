@@ -52,20 +52,23 @@
     </aside>
 </div>
 <main>
-  <section id="home" class="d-flex flex-column justify-content-center">
-    <div class="d-flex p-3 align-items-center flex-column justify-content-center min-vh-100 vw-100">
-      <h3 class="text-center my-5">
-          Hi, I'm <span class="font-weight-bold">Dylan Davies</span>.
+  <section id="home" class="dd-hero dd-animated-wave d-flex flex-column justify-content-center">
+    <div class="dd-hero__content d-flex p-3 align-items-center flex-column justify-content-center w-100">
+      <h1 class="text-center my-5" data-aos="zoom-in" data-aos-delay="200">
+          Hi, I'm Dylan Davies.
           <br />
           I'm a full stack developer.
-      </h3>
-      <a class="dd-btn dd-btn--arrow_downward dd-btn--lg dd-scroll-to" href="#about">
-        Let's make something great
-      </a>
+      </h1>
+      <div data-aos="zoom-in" data-aos-delay="500">
+        <a class="dd-btn dd-btn--arrow_downward dd-btn--lg dd-scroll-to" href="#about">
+          Let's make something great
+        </a>
+      </div>
     </div>
+    <div class="dd-animated-wave__wave" style='background-image:url({{assets.path}}/img/hero-wave.svg)' aria-hidden="true"></div>
   </section>
-  <section id="about" class="bg-light-grey py-6 d-flex flex-column align-items-center min-vh-100 vw-100">
-    <h2 class="text-uppercase font-weight-bold text-center" data-aos="fade-right">About</h2>
+  <section id="about" class="dd-animated-wave dd-animated-wave--padded bg-light-grey py-6 d-flex flex-column align-items-center min-vh-100 w-100">
+    <h2 class="text-uppercase d-inline-block font-weight-bold text-center" data-aos="fade-right">About</h2>
     <div class="dd-header-bar dd-header-bar--lg mx-auto" data-aos="fade-right" data-aos-delay="250"></div>
     <div class="my-4 my-sm-6 container">
       <div class="row">
@@ -101,69 +104,91 @@
         Let's get in touch
       </a>
     </div>
+    <div class="dd-animated-wave__wave" style='background-image:url({{assets.path}}/img/inverted-hero-wave.svg);animation-delay:-4s;' aria-hidden="true"></div>
   </section>
-  <section id="contact" class="py-6 d-flex flex-column vw-100 mw-100" style="min-height:70vh;">
+  <section id="contact" class="dd-animated-wave dd-animated-wave--padded py-6 d-flex flex-column align-items-center w-100 mw-100 min-vh-100">
     <h2 class="text-uppercase font-weight-bold text-center" data-aos="fade-left">Contact</h2>
     <div class="dd-header-bar dd-header-bar--lg mb-3 mx-auto" data-aos="fade-left" data-aos-delay="500"></div>
-    <div class="flex-grow-1 flex-column d-flex justify-content-center align-items-center">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-12 col-lg-8">
-            <form action="https://formspree.io/info.dylandavies@gmail.com" method="POST">
-                <div class="dd-input-container dd-input-container--icon" data-aos="fade-left" data-aos-delay="600">
-                  <i class="material-icons dd-input-container__icon">person</i>
-                  <label class="dd-input-container__label" for="name">Name</label>
-                  <input class="dd-input-container__input" name="name" id="name" type="text"
-                      required />
-                </div>
-                <div class="dd-input-container dd-input-container--icon" data-aos="fade-left" data-aos-delay="700">
-                  <i class="material-icons dd-input-container__icon" aria-hidden="true">email</i>
-                  <label class="dd-input-container__label" for="email">Email</label>
-                  <input class="dd-input-container__input" id="email" name="email"
-                      type="email" required />
-                </div>
-                <div class="dd-input-container dd-input-container--icon" data-aos="fade-left" data-aos-delay="800">
-                  <i class="material-icons dd-input-container__icon" aria-hidden="true">link</i>
-                  <label class="dd-input-container__label" for="website">Website</label>
-                  <input class="dd-input-container__input" name="website" id="website"
-                      type="url" />
-                </div>
-                <div class="dd-input-container dd-input-container--icon" data-aos="fade-left" data-aos-delay="900">
-                  <i class="material-icons dd-input-container__icon" aria-hidden="true">comment</i>
-                  <label for="message" class="dd-input-container__label">Message</label>
-                  <textarea rows="1" class="dd-input-container__input" name="message" id="message" style="width:100%;"></textarea>
-                </div>
-                <div data-aos="fade-left" data-aos-delay="1000">
-                  <button class="dd-btn dd-btn--done">
-                    Submit
-                  </button>
-                </div>
-            </form>
-          </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+          <form action="https://formspree.io/info.dylandavies@gmail.com" method="POST">
+              <div class="dd-input-container dd-input-container--icon" data-aos="fade-left" data-aos-delay="600">
+                <i class="material-icons dd-input-container__icon">person</i>
+                <label class="dd-input-container__label" for="name">Name</label>
+                <input class="dd-input-container__input" name="name" id="name" type="text"
+                    required />
+              </div>
+              <div class="dd-input-container dd-input-container--icon" data-aos="fade-left" data-aos-delay="700">
+                <i class="material-icons dd-input-container__icon" aria-hidden="true">email</i>
+                <label class="dd-input-container__label" for="email">Email</label>
+                <input class="dd-input-container__input" id="email" name="email"
+                    type="email" required />
+              </div>
+              <div class="dd-input-container dd-input-container--icon" data-aos="fade-left" data-aos-delay="800">
+                <i class="material-icons dd-input-container__icon" aria-hidden="true">link</i>
+                <label class="dd-input-container__label" for="website">Website</label>
+                <input class="dd-input-container__input" name="website" id="website"
+                    type="url" />
+              </div>
+              <div class="dd-input-container dd-input-container--icon" data-aos="fade-left" data-aos-delay="900">
+                <i class="material-icons dd-input-container__icon" aria-hidden="true">comment</i>
+                <label for="message" class="dd-input-container__label">Message</label>
+                <textarea rows="1" class="dd-input-container__input" name="message" id="message" style="width:100%;"></textarea>
+              </div>
+              <div data-aos="fade-left" data-aos-delay="1000">
+                <button class="dd-btn dd-btn--done">
+                  Submit
+                </button>
+              </div>
+          </form>
         </div>
       </div>
     </div>
+    <div class="dd-animated-wave__wave" style='background-image:url({{assets.path}}/img/footer-wave.svg);animation-delay:-12s;' aria-hidden="true"></div>
   </section>
 </main>
-<footer class="dd-footer bg-black position-relative">
-  <svg class="position-absolute" style="top:-1px;left:0;" preserveAspectRatio="none" viewBox="0 0 100 102" height="75" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 0 L50 100 L100 0 Z" fill="white" stroke="white"></path>
-  </svg>
-  <div class="pt-5 pb-5 position-relative z-index-1">
-    <a class="mx-auto dd-back-up-btn dd-scroll-to" title="Back to top" aria-label="Back to top" href="#home">
-      <i class="fas fa-angle-double-up"></i>
-    </a>
-    <div class="d-flex mt-5 mb-4 justify-content-center">
-      <a class="dd-icon-btn text-grey mx-3" href="https://www.linkedin.com/in/dylandaviddavies/" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a class="dd-icon-btn text-grey mx-3" href="https://github.com/dylandaviddavies" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener">
-        <i class="fab fa-github"></i>
-      </a>
-      <a class="dd-icon-btn text-grey mx-3" href="https://codepen.io/DylanDavidDavies/" title="CodePen" aria-label="CodePen" target="_blank" rel="noopener">
-        <i class="fab fa-codepen"></i>
-      </a>
-    </div>
-    <p class="text-center text-uppercase letter-spacing-1" style="font-size:.8em;">Dylan Davies ©2019</p>
+<footer class="dd-footer">
+  <img src="{{assets.path}}/img/logo.png" alt="Dylan Davies" class="mb-4 dd-footer__logo"/>
+  <div class="d-flex justify-content-center">
+    <ul class="d-inline-block px-4">
+      <li>
+        <span class="dd-footer__list-title">Navigation</span>
+        <ul>
+          <li>
+            <a href="#home" class="dd-footer__link dd-scroll-to">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="dd-footer__link dd-scroll-to">About</a>
+          </li>
+          <li>
+            <a href="#contact" class="dd-footer__link dd-scroll-to">Contact</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="d-inline-block px-4">
+      <li>
+        <span class="dd-footer__list-title">Follow Me</span>
+        <ul class="d-flex">
+          <li class="mr-3">
+            <a class="dd-footer__link" href="https://www.linkedin.com/in/dylandaviddavies/" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li class="mr-3">
+            <a class="dd-footer__link" href="https://github.com/dylandaviddavies" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener">
+              <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a class="dd-footer__link" href="https://codepen.io/DylanDavidDavies/" title="CodePen" aria-label="CodePen" target="_blank" rel="noopener">
+              <i class="fab fa-codepen" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </div>
+  <span class="py-3">Dylan Davies ©2020</span>
 </footer>

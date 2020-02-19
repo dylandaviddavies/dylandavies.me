@@ -2,7 +2,7 @@ $white: #fff;
 $black:black;
 $grey:#8F9AA7;
 $light-grey:#fafafa;
-$primary:$black;
+$primary:#1a1a1a;
 $secondary: #fb6969;
 
 $spacer: 1rem !default;
@@ -29,4 +29,23 @@ $text-shadows: (
     none: none,
     stylish: .05em .05em rgba(0,0,0,.2),
     sharpen: .01em .01em rgba(0,0,0,.3)
+);
+
+// Directions
+$directions: (
+    l: 'left',
+    t: 'top',
+    r: 'right',
+    b: 'bottom'
+);
+$direction-values: (
+    n1: -1px,
+    0: 0
+);
+
+// Z-indexes
+$z-indexes: (
+    n1: -1,
+    0: 0,
+    1: 1
 );
