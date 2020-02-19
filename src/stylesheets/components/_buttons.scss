@@ -11,8 +11,8 @@
     font-size:13px;
     font-weight:600;
     transition:color .5s cubic-bezier(0.75, 0, 0.125, 1);
-    border:2px solid $black;
-    color:$black;
+    border:2px solid $primary;
+    color:$primary;
     &--lg{
       padding:16px 48px;
       font-size:14px;
@@ -24,7 +24,7 @@
       &--#{$icon}{
         &:before{
           font-family:'Material Icons', serif;
-          background-color:$black;
+          background-color:$primary;
           content:$icon;
           font-feature-settings: 'liga';
           font-weight:500;

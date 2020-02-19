@@ -1,9 +1,9 @@
 @keyframes wave {
     from {
-      background-position: 0 0;
+      background-position-x: 0;
     }
     to {
-      background-position: -1600px 0;
+      background-position-x: -1600px;
     }
 }
 
@@ -14,14 +14,19 @@
         padding-bottom: 20vh !important;
     }
     &__wave {
-        background-repeat: repeat-x;
-        background-position:bottom;
+        background-repeat: repeat-x;        
+        pointer-events:none;
         height:20vh;
-        width:101%;
+        width:100%;
+        pointer-events:none;
         position:absolute;
-        left:-1px;
-        right:-1px;
-        animation: wave 25s linear infinite;
-        bottom:-10px;
+        left:-0px;
+        right:-0px;
+        bottom:0;
+        animation: wave 25s linear infinite;     
+        background-position-y:top;   
+        @media (min-height: 1000px) {
+          background-position-y:bottom;
+        }
     }
 }
