@@ -1,0 +1,10 @@
+.dd-social-link {
+    color:$primary;
+    font-size:28px;
+    display:inline-flex;
+    align-items:center;
+    transition: color .2s;
+    @include hover-focus-active {
+        color:lighten($primary, 10%);
+    }
+}
