@@ -28,10 +28,6 @@
         @include media-breakpoint-down(sm){            
             transform: translateX(-100%);
         }
-        @include media-breakpoint-up(md){     
-            transform: translateX(-100%);
-            width:45%;
-        }
         &__link {
             text-align:center;
             display:block;
@@ -85,18 +81,21 @@
         transition: opacity .4s;
     }
     &--visible{
-        pointer-events:auto;
+        @include media-breakpoint-down(sm){     
+            pointer-events:auto;
+        }
         &:before{
-            opacity:.5;
+            @include media-breakpoint-down(sm){     
+                opacity:.5;
+            }
         }
         #{$self}__drawer{
-            transition: transform .4s;
-            opacity: 1;
+            @include media-breakpoint-down(sm){     
+                transition: transform .4s;
+                opacity: 1;
+            }
             @include media-breakpoint-down(sm){
                 transform: translateY(0);
-            }
-            @include media-breakpoint-up(md){
-                transform: translateX(0);
             }
         }
     }

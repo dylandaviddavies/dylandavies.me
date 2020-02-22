@@ -10,6 +10,10 @@ function toggleShelf($shelf, toggle = !$shelf.hasClass("dd-shelf--visible")){
      let $shelf = $("#" + $(this).attr('aria-controls'));
      toggleShelf($shelf, true);
  });
+ $(document).on("click", ".dd-shelf__toggle-btn", function() {
+     let $shelf = $("#" + $(this).attr('aria-controls'));
+     toggleShelf($shelf);
+ });
  $(document).on("click", ".dd-shelf__close-btn", function(){
     let $shelf = $("#" + $(this).attr('aria-controls'));
     toggleShelf($shelf, false);

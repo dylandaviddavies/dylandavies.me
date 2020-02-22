@@ -74,7 +74,9 @@
   
 .dd-overflow-hidden {
   overflow:hidden;
-  padding-right:17px;
+  @include media-breakpoint-up(sm){
+    padding-right:17px;
+  }
 }
 
 

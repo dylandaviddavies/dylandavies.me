@@ -53,15 +53,4 @@
       }
       pointer-events:auto;
   }
-  &__menu {
-      @extend 
-          .d-inline-flex,
-          .d-md-none,
-          .position-absolute;
-      background:none;
-      border:none;
-      left:16px;
-      color:$black;
-      pointer-events:auto;
-  }
 }
