@@ -24,3 +24,10 @@ $(document).on("mouseup", ".dd-shelf--visible", function(e) {
     if (!$drawer.is(e.target) && !$drawer.has(e.target))
         $this.removeClass("dd-shelf--visible");
 });
+$(document).keyup(e => {
+    if (e.key === "Escape") { 
+        $(".dd-shelf").each(function () {
+            toggleShelf($(this), false);
+        });
+   }
+});
