@@ -1,6 +1,4 @@
-import 'bootstrap';
-import * as $ from 'jquery';
-window.$ = $;
+import $ from 'jquery';
 import AOS from 'aos';
 require('../stylesheets/index.scss');
 import DdInputContainer from "./modules/InputContainer";

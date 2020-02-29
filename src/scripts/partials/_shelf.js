@@ -1,3 +1,4 @@
+import $ from 'jquery';
 function toggleShelf($shelf, toggle = !$shelf.hasClass("dd-shelf--visible")){
     let $btns = $("[aria-controls=" + $shelf.attr("id") + "]");
     $btns.attr("aria-expanded", toggle);

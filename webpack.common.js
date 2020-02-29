@@ -31,18 +31,23 @@ module.exports = {
                     {
                         loader: 'css-loader',
                         options: {
-                            importLoaders: 1
+                            importLoaders: 1,
+                            sourceMap: true
                         }
                     },
                     {loader: 'postcss-loader',
                     options: {
                         plugins: () => [autoprefixer({
                             grid:true
-                        })]
+                        })],
+                        sourceMap: true
                     },
                     },
                     {
-                        loader: 'sass-loader'
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true
+                        }
                     }
                 ],
             },
