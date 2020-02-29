@@ -1,10 +1,9 @@
 const path = require("path");
 const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
 module.exports = {
     entry: {
-        "/assets": "./src/scripts/index.js"
+        "/dist/assets": "./src/scripts/index.js"
     },
     plugins: [
         new MiniCssExtractPlugin({
@@ -14,7 +13,7 @@ module.exports = {
     ],
     devtool: "source-map",
     output: {
-        path: path.resolve(__dirname, 'public/dist'),
+        path: path.resolve(__dirname, 'public'),
         filename: "[name]/js/bundle.js"
     },
     resolve:{
@@ -74,7 +73,7 @@ module.exports = {
                     options: {
                         esModule: false,
                         limit: 10000,
-                        name:'/assets/img/[hash].[ext]' 
+                        name:'dist/assets/img/[hash].[ext]' 
                     }
                 }
               ]
