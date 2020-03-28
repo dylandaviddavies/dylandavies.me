@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Personal website",
   "main": "index.js",
+  "private": true,
   "dependencies": {
     "@babel/core": "^7.8.6",
     "@babel/plugin-transform-classes": "^7.8.6",
@@ -45,7 +46,7 @@
     "url": "git+https://github.com/dylandaviddavies/dylandavies.me.git"
   },
   "author": "Dylan Davies",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/dylandaviddavies/dylandavies.me/issues"
   },

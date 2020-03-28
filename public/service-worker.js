@@ -8,6 +8,7 @@ const PRECACHE_URLS = [
   'dist/assets/js/bundle.js',
   'dist/assets/img/design3.png',
   'dist/assets/img/dylandavies.png',
+  'dist/assets/img/zuricom.png',
   'dist/assets/img/footer-wave.svg',
   'dist/assets/img/hero-wave.svg',
   'dist/assets/img/icons-192.png',
