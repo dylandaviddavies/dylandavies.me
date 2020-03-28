@@ -4,7 +4,6 @@ node_modules/
 .firebase/
 firebase-debug.log
 .firebaserc
-firebase.json
 firestore.rules
 storage.rules
 firestore.indexes.json

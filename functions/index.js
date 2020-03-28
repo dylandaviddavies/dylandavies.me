@@ -16,6 +16,7 @@ app.engine('hbs', hbs({
 app.set("views", "./views");
 app.set("view engine", 'hbs');
 app.get('/', (req, res) => {
+    res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
     let assets = {
         path: "/dist/assets/",
         css:[
