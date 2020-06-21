@@ -10,7 +10,7 @@ app.engine('hbs', hbs({
     extname: '.hbs',
     layoutsDir: __dirname + '/views/layouts',
     helpers: {
-        "seed": () => "swxyz"
+        "seed": () => "sdwxyz"
     }
 }));
 app.set("views", "./views");
