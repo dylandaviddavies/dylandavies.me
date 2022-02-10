@@ -17,7 +17,7 @@
     "css-loader": "^2.1.1",
     "firebase-admin": "8.9.2",
     "jquery": "^3.4.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "popper.js": "^1.16.1",
     "postcss-loader": "^3.0.0",
     "reset-css": "^4.0.1",
