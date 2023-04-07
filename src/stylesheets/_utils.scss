@@ -1,12 +1,27 @@
 @use 'variables';
+@use 'colors';
 
-@each $value in variables.$text-alignments {
-	.text-#{$value} {
-		text-align: $value;
+// Text
+.text {
+	@each $value in variables.$text-alignments {
+		&-#{$value} {
+			text-align: $value !important;
+		}
 	}
 }
 
-// Generates spacer classes. ex. ml-1 = margin-left: 1rem;
+// Colors
+@each $name in colors.$colors {
+	.text-#{$name} {
+		color: var(--#{$name}) !important;
+	}
+
+	.bg-#{$name} {
+		background-color: var(--#{$name}) !important;
+	}
+}
+
+// Spacing
 @each $unit-name, $unit-value in variables.$spacer-units {
 	.#{$unit-name} {
 		@each $spacer-name, $spacer-value in variables.$spacers {
@@ -14,10 +29,12 @@
 				#{$unit-value}: $spacer-value !important;
 			}
 
-			@each $dir-name, $dir-value in variables.$spacer-directions {
+			@each $dir-name, $dir-values in variables.$spacer-directions {
 				&#{$dir-name} {
 					&-#{$spacer-name} {
-						#{$unit-value}-#{$dir-value}: $spacer-value !important;
+						@each $k in $dir-values {
+							#{$unit-value}-#{$k}: $spacer-value !important;
+						}
 					}
 				}
 			}
@@ -25,12 +42,14 @@
 	}
 }
 
+// Display
 @each $value in variables.$displays {
 	.d-#{$value} {
 		display: $value;
 	}
 }
 
+// Flex
 @each $value in variables.$flex-directions {
 	.flex-#{$value} {
 		flex-direction: $value;
@@ -45,6 +64,7 @@
 	}
 }
 
+// Size
 .h-100 {
 	height: 100%;
 }

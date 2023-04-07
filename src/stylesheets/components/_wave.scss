@@ -1,0 +1,27 @@
+.dd-wave {
+	pointer-events: none;
+	background-repeat: repeat-x;
+	height: 20vh;
+	width: 100%;
+	position: absolute;
+	left: -0px;
+	right: -0px;
+	bottom: -2px;
+	animation: wave 25s linear infinite;
+	background-position-y: top;
+	@media (min-height: 1000px) {
+		background-position-y: bottom;
+	}
+
+	&--neutral {
+		background-image: url('./../assets/images/wave-neutral.svg');
+	}
+
+	&--dark {
+		background-image: url('./../assets/images/wave-dark.svg');
+	}
+
+	&--light {
+		background-image: url('./../assets/images/wave-light.svg');
+	}
+}

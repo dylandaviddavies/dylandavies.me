@@ -21,10 +21,26 @@ $spacer-units: (
 ) !default;
 
 $spacer-directions: (
-	l: left,
-	r: right,
-	t: top,
-	b: bottom
+	l: (
+		left
+	),
+	r: (
+		right
+	),
+	t: (
+		top
+	),
+	b: (
+		bottom
+	),
+	y: (
+		top,
+		bottom
+	),
+	x: (
+		left,
+		right
+	)
 ) !default;
 
 $spacers: (
@@ -35,8 +51,17 @@ $spacers: (
 	3: 3rem,
 	4: 4rem,
 	5: 5rem,
-	6: 6rem
+	6: 6rem,
+	7: 7rem,
+	8: 8rem,
+	9: 9rem,
+	10: 10rem,
+	11: 11rem,
+	12: 12rem
 ) !default;
+
+// Content
+$content-width: 1500px;
 
 // Base
 $base: 8px !default;

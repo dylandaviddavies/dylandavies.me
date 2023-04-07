@@ -11,17 +11,28 @@ $themes: (
 			(
 				light: #fff,
 				dark: #151515,
-				background: #fff
+				background: #fff,
+				neutral: grey,
+				neutral-light: #fafafa
 			)
 		)
 ) !default;
 
 $palette: ();
+$colors: ();
 
-@each $k, $v in $themes {
-	@each $name, $value in map.get($v, palette) {
-		@if not list.index($palette, $name) {
-			$palette: list.append($palette, $name);
+@each $theme-name, $theme-map in $themes {
+	@each $color-name, $color-value in map.get($theme-map, palette) {
+		@if not list.index($palette, $color-name) {
+			$palette: list.append($palette, $color-name);
+		}
+	}
+
+	@each $category-name, $color-map in $theme-map {
+		@each $color-name, $color-value in $color-map {
+			@if not list.index($colors, $color-name) {
+				$colors: list.append($colors, $color-name);
+			}
 		}
 	}
 }
