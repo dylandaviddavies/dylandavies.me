@@ -67,7 +67,10 @@
 		<SectionHeading>Projects</SectionHeading>
 		{#each PROJECTS as project, i}
 			<div class="dd-exhibit container">
-				<div class="row align-items-center" class:flex-row-reverse={i % 2}>
+				<div
+					class="row align-items-center flex-sm-row flex-column-reverse"
+					class:flex-sm-row-reverse={i % 2}
+				>
 					<div class="col-sm-6 px-3">
 						<h5 class="dd-exhibit__header">
 							<span>{project.nature}</span>

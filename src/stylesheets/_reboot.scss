@@ -4,6 +4,7 @@
 @use 'mixins';
 
 html {
+	scroll-behavior: smooth;
 	font-size: variables.$base-sm;
 
 	@media (min-width: 768px) {
