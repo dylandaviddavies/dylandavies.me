@@ -24,25 +24,23 @@
 	<div class="dd-wave dd-wave--neutral" />
 </Section>
 
-<Section id="about" class="bg-neutral-light">
+<Section id="about" class="bg-neutral-light justify-content-center">
 	<div class="container">
 		<SectionHeading>About</SectionHeading>
 
 		<div class="row">
 			<div class="col-sm-5 col-12 mb-5 mt-1">
 				<p>
-					Heyo! I'm Dylan and I love creating things that (usually) end up on the internet!
+					Heyo! I'm Dylan and I love creating things for the internet!
 					<br />
 					<br />
 					My career started back in 2013 and since then I've accumulated a large catalogue of projects
-					and experience. Whether it be Twitter bots with thousands of followers, experiential education
-					software for a startup, or a complex data analytics platform for a large organization, I've
-					sure built and shipped a lot of cool stuff!
+					and experience.
 					<br />
 					<br />
-					I'm excited to bring my skills and experience to your project and help you create a website
-					or application that will make a lasting impact. Please feel free to contact me to discuss your
-					project or learn more about my experience.
+					Whether it be Twitter bots with thousands of followers, experiential education software for
+					a startup, or a complex data analytics platform for a large organization, I've sure built and
+					shipped a lot of cool stuff!
 				</p>
 			</div>
 
