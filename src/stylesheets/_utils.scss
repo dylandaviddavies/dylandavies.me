@@ -1,5 +1,6 @@
 @use 'variables';
 @use 'colors';
+@use 'functions';
 
 // Text
 .text {
@@ -10,14 +11,22 @@
 	}
 }
 
+.font-weight {
+	@each $k, $v in variables.$font-weights {
+		&-#{$k} {
+			font-weight: $v !important;
+		}
+	}
+}
+
 // Colors
 @each $name in colors.$colors {
 	.text-#{$name} {
-		color: var(--#{$name}) !important;
+		color: functions.color($name) !important;
 	}
 
 	.bg-#{$name} {
-		background-color: var(--#{$name}) !important;
+		background-color: functions.color($name) !important;
 	}
 }
 
@@ -40,35 +49,4 @@
 			}
 		}
 	}
-}
-
-// Display
-@each $value in variables.$displays {
-	.d-#{$value} {
-		display: $value;
-	}
-}
-
-// Flex
-@each $value in variables.$flex-directions {
-	.flex-#{$value} {
-		flex-direction: $value;
-	}
-}
-
-@each $unit in variables.$flex-alignment-units {
-	@each $direction in variables.$flex-alignment-directions {
-		.#{$unit}-#{$direction} {
-			#{$unit}: $direction !important;
-		}
-	}
-}
-
-// Size
-.h-100 {
-	height: 100%;
-}
-
-.w-100 {
-	width: 100%;
 }

@@ -1,6 +1,13 @@
+@use '../functions';
+
 .dd-divider {
 	width: 9rem;
-	border-bottom: 3px solid var(--dark);
-	margin: 0 auto;
-	display: inline-block;
+	height: 0.4rem;
+	background-color: functions.color(dark);
+	display: block;
+
+	&--sm {
+		width: 5rem;
+		height: 0.3rem;
+	}
 }

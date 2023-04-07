@@ -32,12 +32,14 @@ export const PROJECTS: Project[] = [
 	{
 		nature: 'Professional',
 		name: 'The Orbis Community of Practice',
-		role: 'Front-End Developer',
+		role: 'Frontend Developer',
 		company: 'Orbis Communications',
 		description:
 			'A venue to discuss and share best practices, find out about the latest product developments, and communicate ideas related to Orbis products.',
 		image: theorbiscommunityofpractice,
-		actions: [{ text: 'Learn more', href: 'https://orbiscommunications.com/outcome' }]
+		actions: [
+			{ text: 'Learn more', href: 'https://weareorbis.shorthandstories.com/Equal/index.html' }
+		]
 	},
 	{
 		nature: 'Personal',
@@ -63,12 +65,8 @@ export const PROJECTS: Project[] = [
 		image: dylandavies,
 		actions: [
 			{
-				text: 'Visit website',
-				href: 'https://dylandaviddavies.github.io/vstock'
-			},
-			{
 				text: 'View code',
-				href: 'https://github.com/dylandaviddavies/vstock'
+				href: 'https://github.com/dylandaviddavies/dylandavies.me'
 			}
 		]
 	},

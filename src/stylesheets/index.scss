@@ -1,3 +1,17 @@
-@import 'variables', 'mixins', 'colors', 'reboot', 'utils', 'animations', 'components/button',
-	'components/divider', 'components/button-animation', 'components/section', 'components/exhibit',
-	'components/wave';
+@use 'vendors';
+@use 'variables';
+@use 'functions';
+@use 'mixins';
+@use 'colors';
+@use 'reboot';
+@use 'utils';
+@use 'animations';
+@use 'modules/theme';
+@use 'components/button';
+@use 'components/divider';
+@use 'components/button-animation';
+@use 'components/section';
+@use 'components/exhibit';
+@use 'components/social-link';
+@use 'components/footer';
+@use 'components/wave';

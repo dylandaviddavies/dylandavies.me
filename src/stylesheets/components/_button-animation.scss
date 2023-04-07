@@ -1,6 +1,7 @@
 @use '../colors';
 @use './button';
 @use '../mixins';
+@use '../functions';
 
 .dd-button__animation {
 	pointer-events: none;
@@ -19,8 +20,8 @@
 
 	@each $k in colors.$palette {
 		&--#{$k} {
-			background-color: var(--#{$k});
-			color: var(--#{$k}-text);
+			background-color: functions.color($k);
+			color: functions.color(#{$k}-text);
 		}
 	}
 
@@ -59,7 +60,7 @@
 	.dd-button--#{$k} {
 		@include mixins.hover-focus-active() {
 			.dd-button__animation ~ * {
-				color: var(--#{$k}-text) !important;
+				color: functions.color(#{$k}-text) !important;
 			}
 		}
 	}

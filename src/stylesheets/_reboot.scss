@@ -4,12 +4,21 @@
 @use 'mixins';
 
 html {
-	font-size: variables.$base;
+	font-size: variables.$base-sm;
+
+	@media (min-width: 768px) {
+		font-size: variables.$base;
+	}
+}
+
+a {
+	text-decoration: none;
 }
 
 body {
 	font-size: 2rem;
 	background: var(--background);
+	font-weight: 400;
 }
 
 button {
@@ -32,7 +41,7 @@ p {
 	.theme-#{$k} {
 		@each $type, $type-map in $v {
 			@each $name, $value in $type-map {
-				--#{$name}: #{$value};
+				--dd-#{$name}: #{$value};
 			}
 		}
 	}
@@ -69,4 +78,8 @@ h6 {
 
 * {
 	box-sizing: border-box;
+}
+
+dd {
+	margin-left: 0;
 }

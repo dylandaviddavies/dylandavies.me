@@ -1,18 +1,14 @@
 @use 'sass:list';
 
 // Typography
-@import url(https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,900|Material+Icons);
 $text-font: 'Poppins', sans-serif !default;
 $header-font: 'Poppins', sans-serif !default;
 $text-alignments: center, left, right;
-
-// Display
-$displays: flex, inline-flex, block, inline-block;
-
-// Flex
-$flex-directions: row, row-reverse, column, column-reverse;
-$flex-alignment-units: align-items, justify-content;
-$flex-alignment-directions: (center, flex-end, flex-start);
+$font-weights: (
+	light: 300,
+	regular: 400,
+	bold: 600
+);
 
 // Spacers
 $spacer-units: (
@@ -57,14 +53,15 @@ $spacers: (
 	9: 9rem,
 	10: 10rem,
 	11: 11rem,
-	12: 12rem
+	12: 12rem,
+	13: 13rem,
+	14: 14rem,
+	15: 15rem
 ) !default;
-
-// Content
-$content-width: 1500px;
 
 // Base
 $base: 8px !default;
+$base-sm: 6px !default;
 
 // Miscellaneous
 $yiq-threshold: 150 !default;
