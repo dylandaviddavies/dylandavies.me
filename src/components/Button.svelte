@@ -4,6 +4,8 @@
 	export let color: string = 'primary';
 	export let variation: 'text' | 'flat' | 'outline' | undefined = 'text';
 	export let type: string = 'button';
+	export let target: string | undefined = undefined;
+	export let rel: string | undefined = undefined;
 </script>
 
 <svelte:element
@@ -11,6 +13,8 @@
 	class="dd-button dd-button--{color} dd-button--{variation}"
 	{href}
 	{type}
+	{target}
+	{rel}
 >
 	<slot />
 </svelte:element>
