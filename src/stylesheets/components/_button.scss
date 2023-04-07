@@ -1,4 +1,8 @@
 @use '../colors';
+@use '../mixins';
+
+$transition-speed: 0.5s;
+$transition-curve: cubic-bezier(0.75, 0, 0.125, 1);
 
 .dd-button {
 	padding: 2rem 6rem;
@@ -6,6 +10,16 @@
 	font-weight: 600;
 	font-size: 2rem;
 	text-decoration: none;
+	position: relative;
+	overflow: hidden;
+	transition: border-color $transition-speed $transition-curve,
+		background $transition-speed $transition-curve, color $transition-speed $transition-curve;
+
+	> * {
+		z-index: 1;
+		position: relative;
+		transition: color $transition-speed $transition-curve;
+	}
 
 	&--text {
 		background: none;
@@ -31,6 +45,14 @@
 			background-color: transparent;
 			color: var(--#{$k});
 			border-color: var(--#{$k});
+		}
+	}
+}
+
+@mixin hover-focus-active() {
+	.dd-button {
+		@include mixins.hover-focus-active() {
+			@content;
 		}
 	}
 }

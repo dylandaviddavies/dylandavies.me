@@ -60,7 +60,7 @@ h6 {
 
 @for $i from 0 through 5 {
 	h#{6 - $i} {
-		font-size: $i * 1.5rem;
+		font-size: $i * 1.25rem;
 	}
 }
 

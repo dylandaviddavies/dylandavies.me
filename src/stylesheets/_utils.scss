@@ -5,3 +5,50 @@
 		text-align: $value;
 	}
 }
+
+// Generates spacer classes. ex. ml-1 = margin-left: 1rem;
+@each $unit-name, $unit-value in variables.$spacer-units {
+	.#{$unit-name} {
+		@each $spacer-name, $spacer-value in variables.$spacers {
+			&-#{$spacer-name} {
+				#{$unit-value}: $spacer-value !important;
+			}
+
+			@each $dir-name, $dir-value in variables.$spacer-directions {
+				&#{$dir-name} {
+					&-#{$spacer-name} {
+						#{$unit-value}-#{$dir-value}: $spacer-value !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+@each $value in variables.$displays {
+	.d-#{$value} {
+		display: $value;
+	}
+}
+
+@each $value in variables.$flex-directions {
+	.flex-#{$value} {
+		flex-direction: $value;
+	}
+}
+
+@each $unit in variables.$flex-alignment-units {
+	@each $direction in variables.$flex-alignment-directions {
+		.#{$unit}-#{$direction} {
+			#{$unit}: $direction !important;
+		}
+	}
+}
+
+.h-100 {
+	height: 100%;
+}
+
+.w-100 {
+	width: 100%;
+}
