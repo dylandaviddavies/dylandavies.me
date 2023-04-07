@@ -1,0 +1,27 @@
+@use 'modules/theme';
+@use 'sass:list';
+@use 'sass:map';
+
+$themes: (
+	light:
+		theme.generate(
+			(
+				primary: #151515
+			),
+			(
+				light: #fff,
+				dark: #151515,
+				background: #fff
+			)
+		)
+) !default;
+
+$palette: ();
+
+@each $k, $v in $themes {
+	@each $name, $value in map.get($v, palette) {
+		@if not list.index($palette, $name) {
+			$palette: list.append($palette, $name);
+		}
+	}
+}

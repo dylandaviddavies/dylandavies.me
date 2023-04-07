@@ -1,0 +1,13 @@
+@use 'sass:list';
+
+// Typography
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,900|Material+Icons);
+$text-font: 'Poppins', sans-serif !default;
+$header-font: 'Poppins', sans-serif !default;
+$text-alignments: center, left, right;
+
+// Base
+$base: 8px !default;
+
+// Miscellaneous
+$yiq-threshold: 150 !default;

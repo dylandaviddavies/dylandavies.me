@@ -1,21 +1,2 @@
-@import 
-    'abstracts/variables',
-    'abstracts/mixins',
-    
-    'vendors/all',
-
-    'base/reboot',
-    'base/typography',
-    'base/utilities',
-    'base/animations',
-
-    'layout/body',
-    'layout/navigation',
-    'layout/footer',
-    "layout/drawers",
-
-    'components/buttons',
-    'components/links',
-    'components/heroes',
-    'components/header-bar',
-    'components/inputContainers';
+@import 'variables', 'mixins', 'colors', 'reboot', 'utils', 'animations', 'components/button',
+	'components/section';

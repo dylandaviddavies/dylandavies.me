@@ -1,0 +1,7 @@
+@use 'variables';
+
+@each $value in variables.$text-alignments {
+	.text-#{$value} {
+		text-align: $value;
+	}
+}

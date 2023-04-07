@@ -1,0 +1,36 @@
+@use '../colors';
+
+.dd-button {
+	padding: 2rem 6rem;
+	border: 2px solid transparent;
+	font-weight: 600;
+	font-size: 2rem;
+	text-decoration: none;
+
+	&--text {
+		background: none;
+		border: none;
+	}
+
+	@each $k in colors.$palette {
+		&--text#{&}--#{$k} {
+			color: var(--#{$k});
+		}
+	}
+
+	@each $k in colors.$palette {
+		&--flat#{&}--#{$k} {
+			background-color: var(--#{$k});
+			color: var(--#{$k}-text);
+			border-color: var(--#{$k});
+		}
+	}
+
+	@each $k in colors.$palette {
+		&--outline#{&}--#{$k} {
+			background-color: transparent;
+			color: var(--#{$k});
+			border-color: var(--#{$k});
+		}
+	}
+}
