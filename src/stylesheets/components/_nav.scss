@@ -1,0 +1,32 @@
+@use '../mixins';
+
+.dd-nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+
+	ul {
+		display: flex;
+		align-items: center;
+		list-style: none;
+
+		a {
+			margin: 0 3rem;
+			text-transform: uppercase;
+			font-size: 12px;
+			font-weight: 500;
+			letter-spacing: 1px;
+			color: rgba(0, 0, 0, 0.55);
+			transition: color 0.2s;
+
+			@include mixins.hover-focus-active() {
+				color: #000;
+			}
+		}
+	}
+}
