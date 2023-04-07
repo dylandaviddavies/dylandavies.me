@@ -26,19 +26,19 @@
 	}
 
 	&--ltr {
-		transform: translateX(-100%);
+		transform: translateX(-101%);
 	}
 
 	&--rtl {
-		transform: translateX(100%);
+		transform: translateX(101%);
 	}
 
 	&--ttb {
-		transform: translateY(-100%);
+		transform: translateY(-101%);
 	}
 
 	&--btt {
-		transform: translateY(100%);
+		transform: translateY(101%);
 	}
 }
 
