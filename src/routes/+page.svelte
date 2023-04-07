@@ -5,10 +5,7 @@
 	import Button from '../components/Button.svelte';
 	import ButtonAnimation from '../components/ButtonAnimation.svelte';
 	import SectionHeading from '../components/SectionHeading.svelte';
-	import SectionSubheading from '../components/SectionSubheading.svelte';
 	import { PROJECTS } from '../api/constants';
-	import Divider from '../components/Divider.svelte';
-
 	import logoWhite from '../assets/images/logo-white.svg';
 </script>
 
