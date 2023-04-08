@@ -17,7 +17,7 @@
 	<Button color="primary" kind="text">Text</Button>
 </Story>
 
-<Story name="DirectionalAnimations">
+<Story name="Directional Animations">
 	<Button color="primary" kind="outline">
 		<ButtonAnimation direction="ltr" />
 		<span>Left to Right</span>
@@ -36,7 +36,7 @@
 	</Button>
 </Story>
 
-<Story name="CustomContentAnimations">
+<Story name="Custom Content Animations">
 	<Button color="primary" kind="outline">
 		<ButtonAnimation direction="ttb">
 			<i class="ml-auto material-symbols-outlined">arrow_forward</i>
