@@ -27,41 +27,41 @@
 
 	&--ltr {
 		transform: scaleX(0);
-		transform-origin: left center;
+		transform-origin: right center;
 	}
 
 	&--rtl {
 		transform: scaleX(0);
-		transform-origin: right center;
+		transform-origin: left center;
 	}
 
 	&--ttb {
 		transform: scaleY(0);
-		transform-origin: top center;
+		transform-origin: bottom center;
 	}
 
 	&--btt {
 		transform: scaleY(0);
-		transform-origin: bottom center;
+		transform-origin: top center;
 	}
 }
 
 @include button.hover-focus-active {
 	.dd-button__animation {
 		&--ltr {
-			transform-origin: right center;
-		}
-
-		&--rtl {
 			transform-origin: left center;
 		}
 
+		&--rtl {
+			transform-origin: right center;
+		}
+
 		&--ttb {
-			transform-origin: bottom center;
+			transform-origin: top center;
 		}
 
 		&--btt {
-			transform-origin: top center;
+			transform-origin: bottom center;
 		}
 
 		&--ltr,

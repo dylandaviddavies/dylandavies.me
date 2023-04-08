@@ -6,11 +6,13 @@
 	export let type: string = 'button';
 	export let target: string | undefined = undefined;
 	export let rel: string | undefined = undefined;
+	export let disabled: boolean = false;
 </script>
 
 <svelte:element
 	this={tag}
 	class="dd-button dd-button--{color} dd-button--{kind}"
+	{disabled}
 	{href}
 	{type}
 	{target}

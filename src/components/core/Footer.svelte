@@ -1,5 +1,5 @@
 <script>
-	import logoWhite from '../../assets/images/logo-white.svg';
+	import logoWhite from '../../../static/assets/images/logo-white.svg';
 </script>
 
 <footer class="dd-footer">

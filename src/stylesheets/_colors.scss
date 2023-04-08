@@ -6,7 +6,9 @@ $themes: (
 	light:
 		theme.generate(
 			(
-				primary: #151515
+				primary: #151515,
+				disabled: #ecedf5,
+				disabled-text: rgba(50, 51, 56, 0.38)
 			),
 			(
 				light: #fff,
