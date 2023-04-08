@@ -1,6 +1,6 @@
-@use '../colors';
-@use '../mixins';
-@use '../functions';
+@use '../../colors';
+@use '../../mixins';
+@use '../../functions';
 
 $transition-speed: 0.5s;
 $transition-curve: cubic-bezier(0.75, 0, 0.125, 1);

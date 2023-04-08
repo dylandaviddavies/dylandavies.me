@@ -1,5 +1,5 @@
-@use '../mixins';
-@use '../functions';
+@use '../../mixins';
+@use '../../functions';
 
 .dd-social-link {
 	color: functions.color(primary);

@@ -7,7 +7,7 @@ html {
 	scroll-behavior: smooth;
 	font-size: variables.$base-sm;
 
-	@media (min-width: 768px) {
+	@media (min-width: variables.$breakpoint-sm) {
 		font-size: variables.$base;
 	}
 }
