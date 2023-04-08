@@ -3,6 +3,7 @@
 	import Section from '../common/Section.svelte';
 	import Button from '../common/Button.svelte';
 	import SectionHeading from '../common/SectionHeading.svelte';
+	import Wave from '../common/Wave.svelte';
 </script>
 
 <Section id="about" class="bg-neutral-light justify-content-center">
@@ -37,5 +38,5 @@
 		</div>
 	</div>
 
-	<div class="dd-wave dd-wave--light" />
+	<Wave color="light" />
 </Section>

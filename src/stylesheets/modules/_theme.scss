@@ -5,8 +5,10 @@
 @function generate($palette, $core) {
 	$ret: ();
 
-	$light: map.get($core, light);
-	$dark: map.get($core, dark);
+	$darkTheme: color-yiq(map.get($core, background), true, false);
+
+	$light: map.get($core, if($darkTheme, dark, light));
+	$dark: map.get($core, if($darkTheme, light, dark));
 
 	@each $k, $v in $palette {
 		$ret: map.merge($ret, swatchify($k, $v, $light, $dark));

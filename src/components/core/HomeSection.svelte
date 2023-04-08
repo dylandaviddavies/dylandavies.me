@@ -2,6 +2,7 @@
 	import ButtonAnimation from '../common/ButtonAnimation.svelte';
 	import Section from '../common/Section.svelte';
 	import Button from '../common/Button.svelte';
+	import Wave from '../common/Wave.svelte';
 </script>
 
 <Section id="home" class="py-0 justify-content-center text-sm-left text-center">
@@ -18,5 +19,5 @@
 		</Button>
 	</div>
 
-	<div class="dd-wave dd-wave--neutral" />
+	<Wave color="neutral-light" />
 </Section>

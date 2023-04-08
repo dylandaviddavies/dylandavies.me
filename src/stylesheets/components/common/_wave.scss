@@ -1,6 +1,5 @@
 .dd-wave {
 	pointer-events: none;
-	background-repeat: repeat-x;
 	height: 20vh;
 	width: 100%;
 	position: absolute;
@@ -8,20 +7,14 @@
 	right: -0px;
 	bottom: -2px;
 	animation: wave 25s linear infinite;
-	background-position-y: top;
+	background-color: currentColor;
+	mask-image: url('/assets/images/wave.svg');
+	mask-repeat: repeat-x;
+	-webkit-mask-image: url('/assets/images/wave.svg');
+	-webkit-mask-repeat: repeat-x;
+	-webkit-mask-position-y: top;
+
 	@media (min-height: 1000px) {
 		background-position-y: bottom;
-	}
-
-	&--neutral {
-		background-image: url('./../assets/images/wave-neutral.svg');
-	}
-
-	&--dark {
-		background-image: url('./../assets/images/wave-dark.svg');
-	}
-
-	&--light {
-		background-image: url('./../assets/images/wave-light.svg');
 	}
 }

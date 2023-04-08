@@ -6,10 +6,10 @@
 .dd-button__animation {
 	pointer-events: none;
 	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
+	top: -5px;
+	bottom: -5px;
+	right: -5px;
+	left: -5px;
 	z-index: 0 !important;
 	transition: transform button.$transition-speed button.$transition-curve;
 	display: flex;
@@ -66,12 +66,12 @@
 
 		&--ltr,
 		&--rtl {
-			transform: scaleX(101%);
+			transform: scaleX(100%);
 		}
 
 		&--ttb,
 		&--btt {
-			transform: scaleY(101%);
+			transform: scaleY(100%);
 		}
 	}
 }

@@ -19,6 +19,23 @@ $themes: (
 				text: #777,
 				heading: #151515
 			)
+		),
+	dark:
+		theme.generate(
+			(
+				primary: #fff,
+				disabled: #ecedf5,
+				disabled-text: rgba(50, 51, 56, 0.38)
+			),
+			(
+				light: #151515,
+				dark: #fff,
+				background: #151515,
+				neutral: #777,
+				neutral-light: #232323,
+				text: rgba(#fff, 0.6),
+				heading: #fff
+			)
 		)
 ) !default;
 

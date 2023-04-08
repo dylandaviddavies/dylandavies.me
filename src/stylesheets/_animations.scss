@@ -1,8 +1,8 @@
 @keyframes wave {
 	from {
-		background-position-x: 0;
+		-webkit-mask-position-x: 0;
 	}
 	to {
-		background-position-x: -1600px;
+		-webkit-mask-position-x: -1600px;
 	}
 }
