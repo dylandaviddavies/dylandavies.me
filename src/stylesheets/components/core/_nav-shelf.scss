@@ -1,0 +1,54 @@
+@use '../../variables';
+@use '../../functions';
+@use '../../mixins';
+
+.dd-nav-shelf {
+	&__toggle-button {
+		display: inline-flex;
+		top: 16px;
+		z-index: 99;
+		position: fixed;
+		background: none;
+		border: none;
+		left: 16px;
+		color: functions.color(dark);
+		transition: color 0.2s;
+		pointer-events: auto;
+
+		&[aria-expanded='true'] {
+			color: functions.color(light);
+		}
+
+		&[aria-expanded='false'] {
+			@media (min-width: variables.$breakpoint-sm) {
+				display: none;
+			}
+		}
+	}
+
+	a {
+		text-align: center;
+		display: block;
+		color: functions.color(light);
+		font-weight: 500;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+		font-size: 3rem;
+		padding: 2rem;
+		transition: background-color 0.2s;
+		@include mixins.hover-focus-active {
+			background-color: functions.color(dark);
+			color: functions.color(light);
+		}
+	}
+
+	ul {
+		flex-direction: column;
+		height: 100%;
+		padding: 7rem 3rem;
+		list-style-type: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

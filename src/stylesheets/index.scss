@@ -1,21 +1,20 @@
-@import 
-    'abstracts/variables',
-    'abstracts/mixins',
-    
-    'vendors/all',
-
-    'base/reboot',
-    'base/typography',
-    'base/utilities',
-    'base/animations',
-
-    'layout/body',
-    'layout/navigation',
-    'layout/footer',
-    "layout/drawers",
-
-    'components/buttons',
-    'components/links',
-    'components/heroes',
-    'components/header-bar',
-    'components/inputContainers';
+@use 'vendors';
+@use 'variables';
+@use 'functions';
+@use 'mixins';
+@use 'colors';
+@use 'reboot';
+@use 'utils';
+@use 'animations';
+@use 'modules/theme';
+@use 'components/common/button';
+@use 'components/common/divider';
+@use 'components/common/button-animation';
+@use 'components/common/section';
+@use 'components/common/nav';
+@use 'components/common/exhibit';
+@use 'components/common/social-link';
+@use 'components/common/wave';
+@use 'components/common/shelf';
+@use 'components/core/nav-shelf';
+@use 'components/core/footer';

@@ -1,0 +1,10 @@
+.dd-section {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	min-height: 100vh;
+	position: relative;
+	overflow: hidden;
+	padding-top: 10rem;
+	padding-bottom: 30rem;
+}

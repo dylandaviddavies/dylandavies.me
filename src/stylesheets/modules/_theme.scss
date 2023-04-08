@@ -1,0 +1,39 @@
+@use 'sass:map';
+@use 'sass:math';
+@use '../variables';
+
+@function generate($palette, $core) {
+	$ret: ();
+
+	$light: map.get($core, light);
+	$dark: map.get($core, dark);
+
+	@each $k, $v in $palette {
+		$ret: map.merge($ret, swatchify($k, $v, $light, $dark));
+	}
+
+	@return (palette: $ret, core: $core);
+}
+
+@function swatchify($name, $value, $light, $dark) {
+	@return (
+		#{$name}: $value,
+		#{$name}-text: color-yiq($value, $light, $dark),
+		#{$name}-dark: darken($value, 10%),
+		#{$name}-light: lighten($value, 10%)
+	);
+}
+
+@function color-yiq($color, $light, $dark) {
+	$r: red($color);
+	$g: green($color);
+	$b: blue($color);
+
+	$yiq: math.div((($r * 299) + ($g * 587) + ($b * 114)), 1000);
+
+	@if ($yiq >= variables.$yiq-threshold) {
+		@return $dark;
+	} @else {
+		@return $light;
+	}
+}

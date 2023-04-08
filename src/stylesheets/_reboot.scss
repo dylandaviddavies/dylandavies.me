@@ -1,0 +1,86 @@
+@use 'variables';
+@use 'sass:list';
+@use 'colors';
+@use 'mixins';
+
+html {
+	scroll-behavior: smooth;
+	font-size: variables.$base-sm;
+
+	@media (min-width: variables.$breakpoint-sm) {
+		font-size: variables.$base;
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	font-size: 2rem;
+	background: var(--background);
+	font-weight: 400;
+}
+
+button {
+	padding: 0;
+	cursor: pointer;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+@each $k, $v in colors.$themes {
+	.theme-#{$k} {
+		@each $type, $type-map in $v {
+			@each $name, $value in $type-map {
+				--dd-#{$name}: #{$value};
+			}
+		}
+	}
+}
+
+body,
+button,
+input,
+select,
+form,
+tr,
+td,
+table {
+	font-family: variables.$text-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: variables.$header-font;
+}
+
+@for $i from 0 through 5 {
+	h#{6 - $i} {
+		font-size: $i * 1.25rem;
+	}
+	.h#{6 - $i} {
+		font-size: $i * 1.25rem !important;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+dd {
+	margin-left: 0;
+}

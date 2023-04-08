@@ -1,0 +1,70 @@
+@use 'sass:list';
+
+// Typography
+$text-font: 'Poppins', sans-serif !default;
+$header-font: 'Poppins', sans-serif !default;
+$text-alignments: center, left, right;
+$font-weights: (
+	light: 300,
+	regular: 400,
+	bold: 600
+);
+
+// Spacers
+$spacer-units: (
+	p: padding,
+	m: margin
+) !default;
+
+$spacer-directions: (
+	l: (
+		left
+	),
+	r: (
+		right
+	),
+	t: (
+		top
+	),
+	b: (
+		bottom
+	),
+	y: (
+		top,
+		bottom
+	),
+	x: (
+		left,
+		right
+	)
+) !default;
+
+$spacers: (
+	auto: auto,
+	0: 0,
+	1: 1rem,
+	2: 2rem,
+	3: 3rem,
+	4: 4rem,
+	5: 5rem,
+	6: 6rem,
+	7: 7rem,
+	8: 8rem,
+	9: 9rem,
+	10: 10rem,
+	11: 11rem,
+	12: 12rem,
+	13: 13rem,
+	14: 14rem,
+	15: 15rem
+) !default;
+
+// Base
+$base: 8px !default;
+$base-sm: 6px !default;
+
+// Miscellaneous
+$yiq-threshold: 150 !default;
+
+// Breakpoints
+$breakpoint-sm: 768px;

@@ -1,0 +1,67 @@
+@use '../../colors';
+@use 'button';
+@use '../../mixins';
+@use '../../functions';
+
+.dd-button__animation {
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	z-index: 0 !important;
+	transition: transform button.$transition-speed button.$transition-curve;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 2rem;
+
+	@each $k in colors.$palette {
+		&--#{$k} {
+			background-color: functions.color($k);
+			color: functions.color(#{$k}-text);
+		}
+	}
+
+	&--ltr {
+		transform: translateX(-101%);
+	}
+
+	&--rtl {
+		transform: translateX(101%);
+	}
+
+	&--ttb {
+		transform: translateY(-101%);
+	}
+
+	&--btt {
+		transform: translateY(101%);
+	}
+}
+
+@include button.hover-focus-active {
+	.dd-button__animation {
+		&--ltr,
+		&--rtl {
+			transform: translateX(0);
+		}
+
+		&--ttb,
+		&--btt {
+			transform: translateY(0);
+		}
+	}
+}
+
+@each $k in colors.$palette {
+	.dd-button--#{$k} {
+		@include mixins.hover-focus-active() {
+			.dd-button__animation ~ * {
+				color: functions.color(#{$k}-text) !important;
+			}
+		}
+	}
+}
