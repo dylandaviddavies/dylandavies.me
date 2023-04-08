@@ -26,31 +26,50 @@ $transition-curve: cubic-bezier(0.75, 0, 0.125, 1);
 		transition: color $transition-speed $transition-curve;
 	}
 
-	&--text {
-		background: none;
-		border: none;
-	}
-
 	@each $k in colors.$palette {
 		&--text#{&}--#{$k} {
 			color: functions.color($k);
 		}
 	}
 
+	&--text {
+		background-color: transparent;
+		border: none;
+	}
+
 	@each $k in colors.$palette {
 		&--flat#{&}--#{$k} {
 			background-color: functions.color($k);
 			color: functions.color(#{$k}-text);
-			border-color: functions.color(--#{$k});
+			border-color: functions.color(#{$k});
+		}
+	}
+
+	&--flat {
+		&:disabled {
+			background-color: functions.color(disabled);
+			border-color: functions.color(disabled);
 		}
 	}
 
 	@each $k in colors.$palette {
 		&--outline#{&}--#{$k} {
-			background-color: transparent;
 			color: functions.color($k);
 			border-color: functions.color($k);
 		}
+	}
+
+	&--outline {
+		background-color: transparent;
+
+		&:disabled {
+			border-color: functions.color(disabled);
+		}
+	}
+
+	&:disabled {
+		cursor: default;
+		color: functions.color(disabled-text);
 	}
 }
 

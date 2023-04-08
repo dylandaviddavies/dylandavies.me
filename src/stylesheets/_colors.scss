@@ -6,14 +6,18 @@ $themes: (
 	light:
 		theme.generate(
 			(
-				primary: #151515
+				primary: #151515,
+				disabled: #ecedf5,
+				disabled-text: rgba(50, 51, 56, 0.38)
 			),
 			(
 				light: #fff,
 				dark: #151515,
 				background: #fff,
 				neutral: #777,
-				neutral-light: #fafafa
+				neutral-light: #fafafa,
+				text: #777,
+				heading: #151515
 			)
 		)
 ) !default;

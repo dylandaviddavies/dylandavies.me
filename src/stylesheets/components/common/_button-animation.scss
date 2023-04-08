@@ -26,32 +26,52 @@
 	}
 
 	&--ltr {
-		transform: translateX(-101%);
+		transform: scaleX(0);
+		transform-origin: right center;
 	}
 
 	&--rtl {
-		transform: translateX(101%);
+		transform: scaleX(0);
+		transform-origin: left center;
 	}
 
 	&--ttb {
-		transform: translateY(-101%);
+		transform: scaleY(0);
+		transform-origin: bottom center;
 	}
 
 	&--btt {
-		transform: translateY(101%);
+		transform: scaleY(0);
+		transform-origin: top center;
 	}
 }
 
 @include button.hover-focus-active {
 	.dd-button__animation {
+		&--ltr {
+			transform-origin: left center;
+		}
+
+		&--rtl {
+			transform-origin: right center;
+		}
+
+		&--ttb {
+			transform-origin: top center;
+		}
+
+		&--btt {
+			transform-origin: bottom center;
+		}
+
 		&--ltr,
 		&--rtl {
-			transform: translateX(0);
+			transform: scaleX(100%);
 		}
 
 		&--ttb,
 		&--btt {
-			transform: translateY(0);
+			transform: scaleY(100%);
 		}
 	}
 }

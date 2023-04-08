@@ -26,9 +26,9 @@
 			</div>
 
 			<div class="col-12">
-				<Button href="#projects" variation="outline">
+				<Button href="#projects" kind="outline">
 					<ButtonAnimation direction="ttb">
-						<span class="ml-auto material-icons-round">arrow_downward</span>
+						<span class="ml-auto material-symbols-outlined">arrow_downward</span>
 					</ButtonAnimation>
 
 					<span>Check out some of my work!</span>
