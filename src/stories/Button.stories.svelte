@@ -8,7 +8,12 @@
 <Meta title="Components/Button" component={Button} />
 
 <Story name="Basic">
-	<Button color="primary" kind="outline">Click Me</Button>
+	<Button color="primary" kind="outline">
+		<ButtonAnimation direction="ttb">
+			<i class="ml-auto material-symbols-outlined">arrow_forward</i>
+		</ButtonAnimation>
+		<span>Click Me</span>
+	</Button>
 </Story>
 
 <Story name="Kinds">

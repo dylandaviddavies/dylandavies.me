@@ -1,10 +1,19 @@
 @use 'variables';
 @use 'colors';
 @use 'functions';
+@use 'mixins';
 
 // Text
 .text {
 	@each $value in variables.$text-alignments {
+		@each $breakpoint-name, $breakpoint-value in variables.$breakpoints {
+			@include mixins.breakpoint-up($breakpoint-name) {
+				&-#{$breakpoint-name}-#{$value} {
+					text-align: $value !important;
+				}
+			}
+		}
+
 		&-#{$value} {
 			text-align: $value !important;
 		}

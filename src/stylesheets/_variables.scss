@@ -67,4 +67,6 @@ $base-sm: 6px !default;
 $yiq-threshold: 150 !default;
 
 // Breakpoints
-$breakpoint-sm: 768px;
+$breakpoints: (
+	sm: 768px
+) !default;

@@ -20,7 +20,7 @@
 		}
 
 		&[aria-expanded='false'] {
-			@media (min-width: variables.$breakpoint-sm) {
+			@include mixins.breakpoint-up(sm) {
 				display: none;
 			}
 		}

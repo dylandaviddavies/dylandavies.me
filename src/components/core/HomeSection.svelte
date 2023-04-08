@@ -4,9 +4,11 @@
 	import Button from '../common/Button.svelte';
 </script>
 
-<Section id="home" class="py-0 justify-content-center">
+<Section id="home" class="py-0 justify-content-center text-sm-left text-center">
 	<div class="container">
-		<h1 class="mb-5">Hi, I'm Dylan Davies. <br /> I'm a full stack developer.</h1>
+		<h1 class="mb-5">
+			Hi, I'm Dylan Davies. <br /> I'm a full stack developer.
+		</h1>
 
 		<Button href="#about" kind="outline">
 			<ButtonAnimation direction="ttb">

@@ -31,7 +31,7 @@ export const PROJECTS: Project[] = [
 	},
 	{
 		nature: 'Professional',
-		name: 'The Orbis Community of Practice',
+		name: 'Orbis Community of Practice',
 		role: 'Frontend Developer',
 		company: 'Orbis Communications',
 		description:

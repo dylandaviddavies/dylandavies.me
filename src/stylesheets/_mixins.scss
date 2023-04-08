@@ -8,3 +8,15 @@
 		@content;
 	}
 }
+
+@mixin breakpoint-up($name) {
+	@media (min-width: map.get(variables.$breakpoints, $name)) {
+		@content;
+	}
+}
+
+@mixin breakpoint-down($name) {
+	@media (max-width: map.get(variables.$breakpoints, $name) - 1px) {
+		@content;
+	}
+}

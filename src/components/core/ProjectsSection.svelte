@@ -19,9 +19,9 @@
 						<h5 class="dd-exhibit__header">
 							<span>{project.nature}</span>
 						</h5>
-						<h3 class="dd-exhibit__heading">
+						<h2 class="dd-exhibit__heading">
 							<span>{project.name}</span>
-						</h3>
+						</h2>
 						{#if project.role && project.company}
 							<div class="dd-exhibit__subheading">
 								<span>{project.role} · {project.company}</span>

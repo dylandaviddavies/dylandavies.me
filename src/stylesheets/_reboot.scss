@@ -8,7 +8,7 @@ html {
 	scroll-behavior: smooth;
 	font-size: variables.$base-sm;
 
-	@media (min-width: variables.$breakpoint-sm) {
+	@include mixins.breakpoint-up(sm) {
 		font-size: variables.$base;
 	}
 }
@@ -79,11 +79,16 @@ h6 {
 }
 
 @for $i from 0 through 5 {
-	h#{6 - $i} {
-		font-size: $i * 1.25rem;
-	}
-	.h#{6 - $i} {
-		font-size: $i * 1.25rem !important;
+	$num: 6 - $i;
+	$size: $i * 1.2rem;
+
+	h#{$num},
+	.h#{$num} {
+		font-size: $size;
+
+		@include mixins.breakpoint-down(sm) {
+			font-size: $size * 0.7;
+		}
 	}
 }
 
