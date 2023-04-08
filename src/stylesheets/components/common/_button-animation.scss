@@ -66,12 +66,12 @@
 
 		&--ltr,
 		&--rtl {
-			transform: scaleX(100%);
+			transform: scaleX(101%);
 		}
 
 		&--ttb,
 		&--btt {
-			transform: scaleY(100%);
+			transform: scaleY(101%);
 		}
 	}
 }
