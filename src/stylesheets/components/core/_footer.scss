@@ -48,7 +48,7 @@
 		margin-bottom: 1rem;
 
 		@include mixins.hover-focus-active() {
-			color: functions.color(neutral-light);
+			color: functions.color(neutral-dark);
 		}
 	}
 

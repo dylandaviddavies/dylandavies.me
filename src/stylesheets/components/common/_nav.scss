@@ -1,5 +1,6 @@
 @use '../../mixins';
 @use '../../variables';
+@use '../../functions';
 
 .dd-nav {
 	display: flex;
@@ -26,11 +27,11 @@
 			font-size: 12px;
 			font-weight: 500;
 			letter-spacing: 1px;
-			color: rgba(0, 0, 0, 0.55);
+			color: functions.color(neutral);
 			transition: color 0.2s;
 
 			@include mixins.hover-focus-active() {
-				color: #000;
+				color: functions.color(neutral-dark);
 			}
 		}
 	}
