@@ -67,6 +67,10 @@ export const PROJECTS: Project[] = [
 			{
 				text: 'View code',
 				href: 'https://github.com/dylandaviddavies/dylandavies.me'
+			},
+			{
+				text: 'View UI kit',
+				href: 'https://ui.dylandavies.me'
 			}
 		]
 	},
