@@ -8,7 +8,7 @@
 	<div class="container">
 		<h1 class="mb-5">Hi, I'm Dylan Davies. <br /> I'm a full stack developer.</h1>
 
-		<Button href="#about" variation="outline">
+		<Button href="#about" kind="outline">
 			<ButtonAnimation direction="ttb">
 				<span class="ml-auto material-icons-round">arrow_downward</span>
 			</ButtonAnimation>

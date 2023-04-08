@@ -32,12 +32,7 @@
 						</p>
 						<div class="dd-exhibit__actions">
 							{#each project.actions as action}
-								<Button
-									href={action.href}
-									target="_blank"
-									rel="noopener noreferrer"
-									variation="outline"
-								>
+								<Button href={action.href} target="_blank" rel="noopener noreferrer" kind="outline">
 									<ButtonAnimation direction="ttb">
 										<span class="ml-auto material-icons-round">arrow_forward</span>
 									</ButtonAnimation>

@@ -15,7 +15,7 @@
 				Whether you have a question or just want to say hi, I’ll try my best to get back to you!
 			</p>
 
-			<Button variation="outline" href="mailto:dylandaviddavies@gmail.com">
+			<Button kind="outline" href="mailto:dylandaviddavies@gmail.com">
 				<ButtonAnimation direction="rtl"><span class="ml-auto">👋</span></ButtonAnimation>
 
 				<span class="d-inline-flex align-items-center"> Say Hello </span>

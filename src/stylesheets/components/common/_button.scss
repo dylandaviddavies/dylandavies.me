@@ -41,7 +41,7 @@ $transition-curve: cubic-bezier(0.75, 0, 0.125, 1);
 		&--flat#{&}--#{$k} {
 			background-color: functions.color($k);
 			color: functions.color(#{$k}-text);
-			border-color: functions.color(--#{$k});
+			border-color: functions.color(#{$k});
 		}
 	}
 

@@ -1,0 +1,35 @@
+import { Story, Canvas, Meta } from '@storybook/blocks';
+
+import * as ButtonStories from './Button.stories.svelte';
+
+# Button
+Buttons allow users to trigger an action or event with a single click. For example, you can use a button for submitting a form, opening a dialog, or opening a link.
+
+<Meta title="Documentation/Button" />
+
+<Canvas>
+    <Story of={ButtonStories.Basic} />
+</Canvas>
+
+## Variations
+There can be more than one button in a screen, so we need to create the hierarchy of actions using different button variations.
+
+### Kinds
+
+<Canvas>
+    <Story of={ButtonStories.Kinds} />
+</Canvas>
+
+### Animations
+Buttons can have a variety of hover animations with their own custom content.
+
+#### Directional
+<Canvas>
+    <Story of={ButtonStories.DirectionalAnimations} />
+</Canvas>
+
+#### Custom Content
+<Canvas>
+    <Story of={ButtonStories.CustomContentAnimations} />
+</Canvas>
+

@@ -27,23 +27,43 @@
 
 	&--ltr {
 		transform: translateX(-101%);
+		transform-origin: left center;
 	}
 
 	&--rtl {
 		transform: translateX(101%);
+		transform-origin: right center;
 	}
 
 	&--ttb {
 		transform: translateY(-101%);
+		transform-origin: top center;
 	}
 
 	&--btt {
 		transform: translateY(101%);
+		transform-origin: bottom center;
 	}
 }
 
 @include button.hover-focus-active {
 	.dd-button__animation {
+		&--ltr {
+			transform-origin: right center;
+		}
+
+		&--rtl {
+			transform-origin: left center;
+		}
+
+		&--ttb {
+			transform-origin: bottom center;
+		}
+
+		&--btt {
+			transform-origin: top center;
+		}
+
 		&--ltr,
 		&--rtl {
 			transform: translateX(0);
