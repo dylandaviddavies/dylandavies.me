@@ -13,7 +13,7 @@
 	type="button"
 	on:click={() => (visible = !visible)}
 >
-	<i class="material-icons material-icons-round">menu</i>
+	<i class="material-symbols-outlined">menu</i>
 </button>
 
 <Shelf {id} {visible} class="dd-nav-shelf">

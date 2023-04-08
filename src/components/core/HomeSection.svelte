@@ -10,7 +10,7 @@
 
 		<Button href="#about" kind="outline">
 			<ButtonAnimation direction="ttb">
-				<span class="ml-auto material-icons-round">arrow_downward</span>
+				<span class="ml-auto material-symbols-outlined">arrow_downward</span>
 			</ButtonAnimation>
 			<span>Let's make something great!</span>
 		</Button>

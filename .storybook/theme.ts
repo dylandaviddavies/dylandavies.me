@@ -14,5 +14,7 @@ export default create({
 	textColor: '#151515',
 	textInverseColor: '#ffffff',
 	appBg: '#ffffff',
-	appContentBg: '#ffffff'
+	appContentBg: '#ffffff',
+	fontBase: '"Poppins", sans-serif',
+	fontCode: 'monospace'
 });

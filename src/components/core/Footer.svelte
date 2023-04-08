@@ -1,9 +1,5 @@
-<script>
-	import logoWhite from '../../../static/assets/images/logo-white.svg';
-</script>
-
 <footer class="dd-footer">
-	<img src={logoWhite} alt="Dylan Davies" class="dd-footer__logo" />
+	<img src="/assets/images/logo-white.svg" alt="Dylan Davies" class="dd-footer__logo" />
 	<div class="d-flex justify-content-center">
 		<div class="mr-5">
 			<span class="dd-footer__heading">Navigation</span>

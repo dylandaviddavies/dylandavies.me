@@ -39,7 +39,7 @@
 <Story name="CustomContentAnimations">
 	<Button color="primary" kind="outline">
 		<ButtonAnimation direction="ttb">
-			<i class="ml-auto material-icons material-icons-round">arrow_forward</i>
+			<i class="ml-auto material-symbols-outlined">arrow_forward</i>
 		</ButtonAnimation>
 		<span>Icon</span>
 	</Button>

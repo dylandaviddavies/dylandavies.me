@@ -2,6 +2,7 @@
 @use 'sass:list';
 @use 'colors';
 @use 'mixins';
+@use 'functions';
 
 html {
 	scroll-behavior: smooth;
@@ -20,11 +21,20 @@ body {
 	font-size: 2rem;
 	background: var(--background);
 	font-weight: 400;
+	color: functions.color(text);
 }
 
 button {
 	padding: 0;
 	cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: functions.color(heading);
 }
 
 body,
