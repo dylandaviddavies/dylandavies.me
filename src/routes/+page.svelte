@@ -8,8 +8,6 @@
 	import ProjectsSection from '../components/core/ProjectsSection.svelte';
 	import Footer from '../components/core/Footer.svelte';
 	import ContactSection from '../components/core/ContactSection.svelte';
-
-	(() => document.body.removeAttribute('hidden'))();
 </script>
 
 <NavShelf />
