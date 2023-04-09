@@ -1,5 +1,4 @@
 <script lang="ts">
-	import '../stylesheets/index.scss';
 	import Nav from '../components/common/Nav.svelte';
 	import NavItem from '../components/common/NavItem.svelte';
 	import NavShelf from '../components/core/NavShelf.svelte';
