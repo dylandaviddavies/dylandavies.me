@@ -3,6 +3,14 @@
 @use 'colors';
 @use 'mixins';
 @use 'functions';
+@use './modules/theme';
+@use 'sass:map';
+
+@each $k, $v in colors.$themes {
+	.theme-#{$k} {
+		@include theme.add-css-variables($v);
+	}
+}
 
 html {
 	scroll-behavior: smooth;
@@ -10,6 +18,14 @@ html {
 
 	@include mixins.breakpoint-up(sm) {
 		font-size: variables.$base;
+	}
+
+	@media (prefers-color-scheme: light) {
+		@include theme.add-css-variables(map.get(colors.$themes, light));
+	}
+
+	@media (prefers-color-scheme: dark) {
+		@include theme.add-css-variables(map.get(colors.$themes, dark));
 	}
 }
 
@@ -46,16 +62,6 @@ h5,
 h6,
 p {
 	margin: 0;
-}
-
-@each $k, $v in colors.$themes {
-	.theme-#{$k} {
-		@each $type, $type-map in $v {
-			@each $name, $value in $type-map {
-				--dd-#{$name}: #{$value};
-			}
-		}
-	}
 }
 
 body,
@@ -98,4 +104,8 @@ h6 {
 
 dd {
 	margin-left: 0;
+}
+
+.no-transition * {
+	transition: none !important;
 }

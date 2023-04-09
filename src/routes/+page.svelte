@@ -9,10 +9,7 @@
 	import Footer from '../components/core/Footer.svelte';
 	import ContactSection from '../components/core/ContactSection.svelte';
 
-	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
-		document.body.classList.remove(event.matches ? 'theme-light' : 'theme-dark');
-		document.body.classList.add(event.matches ? 'theme-dark' : 'theme-light');
-	});
+	(() => document.body.classList.remove('no-transition'))();
 </script>
 
 <NavShelf />

@@ -17,6 +17,14 @@
 	@return (palette: $ret, core: $core);
 }
 
+@mixin add-css-variables($theme) {
+	@each $type, $type-map in $theme {
+		@each $name, $value in $type-map {
+			--dd-#{$name}: #{$value};
+		}
+	}
+}
+
 @function swatchify($name, $value, $light, $dark) {
 	@return (
 		#{$name}: $value,
