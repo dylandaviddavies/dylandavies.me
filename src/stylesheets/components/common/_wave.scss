@@ -12,7 +12,7 @@
 	mask-repeat: repeat-x;
 	-webkit-mask-image: url('/assets/images/wave.svg');
 	-webkit-mask-repeat: repeat-x;
-	-webkit-mask-position-y: top;
+	-webkit-mask-position-y: bottom;
 
 	@media (min-height: 1000px) {
 		background-position-y: bottom;
