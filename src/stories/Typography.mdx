@@ -1,0 +1,21 @@
+import { Meta, Story, Canvas } from '@storybook/blocks';
+import * as TypographyStories from './Typography.stories.svelte';
+
+<Meta title="Documentation/Typography" />
+
+# Typography
+Typography plays a crucial role in user experience design by shaping the way information is communicated and perceived, thus impacting the overall usability and appeal of a product or interface.
+
+## Headings
+Headings in typography are a hierarchical system of organizing content that provide visual cues and improve scannability and navigation for the reader.
+
+Text can be styled as a heading using the `h1-h6` HTML tags and `.h1-.h6` CSS classes.
+<Canvas>
+  <Story of={TypographyStories.Headings} />
+</Canvas>
+
+## Text
+Standard text.
+<Canvas>
+  <Story of={TypographyStories.Text} />
+</Canvas>

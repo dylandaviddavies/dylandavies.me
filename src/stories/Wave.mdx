@@ -3,10 +3,18 @@ import { Story, Canvas, Meta } from '@storybook/blocks';
 import * as WaveStories from './Wave.stories.svelte';
 
 # Wave
+Primarily used to separate content on a page in a flashier way than just using a dividing line.
 
+The color can be customized by setting a color on the `.dd-wave` element.
 
 <Meta title="Documentation/Wave" />
 
+## Svelte
 <Canvas>
-  <Story of={WaveStories.Basic} />
+  <Story of={WaveStories.SvelteBasic} />
+</Canvas>
+
+## HTML & CSS
+<Canvas>
+  <Story of={WaveStories.CssBasic} />
 </Canvas>

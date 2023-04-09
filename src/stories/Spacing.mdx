@@ -1,0 +1,23 @@
+import { Meta, Story, Canvas } from '@storybook/blocks';
+import * as SpacingStories from './Spacing.stories.svelte';
+
+<Meta title="Documentation/Spacing" />
+
+# Spacing
+Proper spacing is essential in user experience web design, as it enhances readability, improves visual balance and hierarchy, and provides breathing space that improves user comprehension and engagement with content.
+
+Padding and margin CSS utility classes are provided and follow the below format:
+
+`pl-1` `pr-2` `m-2` `mt-5`
+
+`{unit}{direction?}-{amount}`
+
+## Margin
+<Canvas>
+  <Story of={SpacingStories.Margin} />
+</Canvas>
+
+## Padding
+<Canvas>
+  <Story of={SpacingStories.Padding} />
+</Canvas>

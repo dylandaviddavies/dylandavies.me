@@ -1,0 +1,29 @@
+import { Meta, Story, Canvas } from '@storybook/blocks';
+import * as ColorStories from './Color.stories.svelte';
+
+<Meta title="Documentation/Color" />
+
+# Color
+Color is a critical component in user experience web design, as it influences user perception and emotion, aids in content organization, and helps to establish brand identity and recognition.
+
+## Text
+Colors can be applied to text using the `.text-*` CSS utility classes.
+<Canvas>
+  <Story of={ColorStories.Text} />
+</Canvas>
+
+## Backgrounds
+Background colors can be applied using the `.bg-*` CSS utility classes.
+<Canvas>
+  <Story of={ColorStories.Backgrounds} />
+</Canvas>
+
+## Theme
+Themes can be applied using the `.theme-*` CSS utility classes. Themes are color palettes, each color having its own specific function.
+
+The theme CSS class will define CSS variables on its element that then can be used within its scope.
+
+For example: `background: var(--dd-background)` apply a background color using theme's background color.
+<Canvas>
+  <Story of={ColorStories.Theme} />
+</Canvas>
