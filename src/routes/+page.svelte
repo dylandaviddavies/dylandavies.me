@@ -14,7 +14,7 @@
 <Nav>
 	<NavItem href="#home">Home</NavItem>
 	<NavItem href="#about">About</NavItem>
-	<NavItem href="#project">Projects</NavItem>
+	<NavItem href="#projects">Projects</NavItem>
 	<NavItem href="#contact">Contact</NavItem>
 </Nav>
 
