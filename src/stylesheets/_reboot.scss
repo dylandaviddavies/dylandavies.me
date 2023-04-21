@@ -84,12 +84,14 @@ h6 {
 	font-family: variables.$header-font;
 }
 
-@for $i from 0 through 5 {
+@for $i from 0 through 6 {
 	$num: 6 - $i;
 	$size: $i * 1.2rem;
+	$size: if($size == 0rem, 1rem, $size);
 
 	h#{$num},
 	.h#{$num} {
+		line-height: 1.5;
 		font-size: $size;
 
 		@include mixins.breakpoint-down(sm) {
