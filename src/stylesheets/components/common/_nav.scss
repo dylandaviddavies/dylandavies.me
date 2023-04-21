@@ -1,16 +1,9 @@
 @use '../../mixins';
 @use '../../variables';
 @use '../../functions';
-
 .dd-nav {
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 1;
 
 	@include mixins.breakpoint-down(sm) {
 		display: none;
