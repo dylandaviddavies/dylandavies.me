@@ -3,6 +3,8 @@
   import Section from "../common/Section.svelte";
   import SectionHeading from "../common/SectionHeading.svelte";
   import Wave from "../common/Wave.svelte";
+  import ButtonAnimation from "../common/ButtonAnimation.svelte";
+  import Button from "../common/Button.svelte";
 </script>
 
 <Section id="experience">
@@ -27,6 +29,17 @@
             <p class="dd-exhibit__text">
               {experience.description}
             </p>
+            <div class="dd-exhibit__actions">
+              {#each experience.actions as action}
+                <Button href={action.href} target="_blank" rel="noopener noreferrer" kind="outline">
+                  <ButtonAnimation direction="ttb">
+                    <span class="ml-auto material-symbols-outlined">arrow_forward</span>
+                  </ButtonAnimation>
+
+                  <span>{action.text}</span>
+                </Button>
+              {/each}
+            </div>
           </div>
 
           <div class="col-sm-6 col-12">

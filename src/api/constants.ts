@@ -19,7 +19,8 @@ export const EXPERIENCES: Experience[] = [
     description: "Developing full stack web apps for RBC Borealis: RBC's flagship AI and data innovation initiative.",
     image: rbcBorealis,
     fromDate: "Apr 2024",
-    toDate: "Present"
+    toDate: "Present",
+    actions: [{ text: "Learn more", href: "https://rbcborealis.com" }]
   },
   {
     name: "Sr. Full Stack Developer",
@@ -27,14 +28,16 @@ export const EXPERIENCES: Experience[] = [
     description: "Developed full stack web apps for Canada's largest bank.",
     image: rbc,
     fromDate: "Oct 2020",
-    toDate: "Apr 2024"
+    toDate: "Apr 2024",
+    actions: [{ text: "Learn more", href: "https://www.rbc.com/our-company/" }]
   }, {
     name: "Full Stack Developer",
     company: "Orbis Communications",
     description: "Developed full stack web applications for one of the largest experiential learning providers in North America.",
     image: orbis,
     fromDate: "May 2016",
-    toDate: "Oct 2020"
+    toDate: "Oct 2020",
+    actions: [{ text: "Learn more", href: "https://orbiscommunications.com" }]
   }];
 
 export const PROJECTS: Project[] = [
