@@ -5,57 +5,71 @@
 
 // Text
 .text {
-	@each $value in variables.$text-alignments {
-		@each $breakpoint-name, $breakpoint-value in variables.$breakpoints {
-			@include mixins.breakpoint-up($breakpoint-name) {
-				&-#{$breakpoint-name}-#{$value} {
-					text-align: $value !important;
-				}
-			}
-		}
+  @each $value in variables.$text-alignments {
+    @each $breakpoint-name, $breakpoint-value in variables.$breakpoints {
+      @include mixins.breakpoint-up($breakpoint-name) {
+        &-#{$breakpoint-name}-#{$value} {
+          text-align: $value !important;
+        }
+      }
+    }
 
-		&-#{$value} {
-			text-align: $value !important;
-		}
-	}
+    &-#{$value} {
+      text-align: $value !important;
+    }
+  }
 }
 
 .font-weight {
-	@each $k, $v in variables.$font-weights {
-		&-#{$k} {
-			font-weight: $v !important;
-		}
-	}
+  @each $k, $v in variables.$font-weights {
+    &-#{$k} {
+      font-weight: $v !important;
+    }
+  }
+}
+
+.inverted {
+  &--light {
+    @media (prefers-color-scheme: light) {
+      filter: invert(1);
+    }
+  }
+
+  &--dark {
+    @media (prefers-color-scheme: dark) {
+      filter: invert(1);
+    }
+  }
 }
 
 // Colors
 @each $name in colors.$colors {
-	.text-#{$name} {
-		color: functions.color($name) !important;
-	}
+  .text-#{$name} {
+    color: functions.color($name) !important;
+  }
 
-	.bg-#{$name} {
-		background-color: functions.color($name) !important;
-	}
+  .bg-#{$name} {
+    background-color: functions.color($name) !important;
+  }
 }
 
 // Spacing
 @each $unit-name, $unit-value in variables.$spacer-units {
-	.#{$unit-name} {
-		@each $spacer-name, $spacer-value in variables.$spacers {
-			&-#{$spacer-name} {
-				#{$unit-value}: $spacer-value !important;
-			}
+  .#{$unit-name} {
+    @each $spacer-name, $spacer-value in variables.$spacers {
+      &-#{$spacer-name} {
+        #{$unit-value}: $spacer-value !important;
+      }
 
-			@each $dir-name, $dir-values in variables.$spacer-directions {
-				&#{$dir-name} {
-					&-#{$spacer-name} {
-						@each $k in $dir-values {
-							#{$unit-value}-#{$k}: $spacer-value !important;
-						}
-					}
-				}
-			}
-		}
-	}
+      @each $dir-name, $dir-values in variables.$spacer-directions {
+        &#{$dir-name} {
+          &-#{$spacer-name} {
+            @each $k in $dir-values {
+              #{$unit-value}-#{$k}: $spacer-value !important;
+            }
+          }
+        }
+      }
+    }
+  }
 }

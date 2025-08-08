@@ -43,7 +43,8 @@
           </div>
 
           <div class="col-sm-6 col-12">
-            <img class="dd-exhibit__image" alt={experience.company} src={experience.image} />
+            <img class:inverted--light={experience.invertInLightMode} class="dd-exhibit__image" alt={experience.company}
+                 src={experience.image} />
           </div>
         </div>
       </div>

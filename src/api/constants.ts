@@ -35,6 +35,7 @@ export const EXPERIENCES: Experience[] = [
     company: "Orbis Communications",
     description: "Developed full stack web applications for one of the largest experiential learning providers in North America.",
     image: orbis,
+    invertInLightMode: true,
     fromDate: "May 2016",
     toDate: "Oct 2020",
     actions: [{ text: "Learn more", href: "https://orbiscommunications.com" }]
