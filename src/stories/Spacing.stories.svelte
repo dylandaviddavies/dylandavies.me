@@ -13,14 +13,14 @@
 </Story>
 
 <Story name="Padding">
-	<p class="p-4 bg-disabled d-inline-block">p-4</p>
+	<p class="p-4 bg-disabled inline-block">p-4</p>
 	<br /><br />
-	<p class="pl-4 bg-disabled d-inline-block">pl-4</p>
+	<p class="pl-4 bg-disabled inline-block">pl-4</p>
 	<br /><br />
-	<p class="pr-4 bg-disabled d-inline-block">pr-4</p>
+	<p class="pr-4 bg-disabled inline-block">pr-4</p>
 	<br /><br />
-	<p class="pb-4 bg-disabled d-inline-block">pb-4</p>
+	<p class="pb-4 bg-disabled inline-block">pb-4</p>
 	<br /><br />
-	<p class="pt-4 bg-disabled d-inline-block">pt-4</p>
+	<p class="pt-4 bg-disabled inline-block">pt-4</p>
 	<br /><br />
 </Story>

@@ -11,7 +11,6 @@ const config: StorybookConfig = {
 		'@storybook/addon-essentials',
 		'@storybook/addon-interactions',
 		'@storybook/addon-docs',
-		'@storybook/preset-scss',
 		'@storybook/addon-svelte-csf'
 	],
 	framework: {

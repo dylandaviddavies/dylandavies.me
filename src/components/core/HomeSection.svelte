@@ -5,7 +5,7 @@
 	import Wave from '../common/Wave.svelte';
 </script>
 
-<Section id="home" class="py-0 justify-content-center text-sm-left text-center">
+<Section id="home" class="justify-center py-0! text-center md:text-left">
 	<div class="container">
 		<h1 class="mb-5">
 			Hi, I'm Dylan Davies. <br /> I'm a full stack developer.
