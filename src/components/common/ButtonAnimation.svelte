@@ -10,7 +10,6 @@
 	};
 </script>
 
-<!-- `dd-button-animation` is a marker Button uses to recolour the content after it on hover -->
 <div
 	class="dd-button-animation pointer-events-none absolute! -inset-[5px] z-0! flex flex-col items-center justify-center px-2 transition-transform! duration-500 ease-button {directions[
 		direction

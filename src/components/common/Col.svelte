@@ -1,7 +1,6 @@
 <script lang="ts">
 	type Span = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 
-	// Columns out of 12 from each breakpoint up; full width below the smallest one set
 	export let sm: Span | undefined = undefined;
 	export let md: Span | undefined = undefined;
 	export let lg: Span | undefined = undefined;
