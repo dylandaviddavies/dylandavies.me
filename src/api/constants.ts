@@ -17,10 +17,10 @@ export const EXPERIENCES: Experience[] = [
 		name: 'Sr. Full Stack Developer',
 		company: 'RBC Borealis',
 		description:
-			"Developing full stack web apps for RBC Borealis: RBC's flagship AI and data innovation initiative.",
+			"Developed full stack web apps for RBC Borealis: RBC's flagship AI and data innovation initiative.",
 		image: rbcBorealis,
 		fromDate: 'Apr 2024',
-		toDate: 'Present',
+		toDate: 'Oct 2026',
 		actions: [{ text: 'Learn more', href: 'https://rbcborealis.com' }]
 	},
 	{
