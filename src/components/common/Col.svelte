@@ -5,7 +5,7 @@
 	export let md: Span | undefined = undefined;
 	export let lg: Span | undefined = undefined;
 
-	let className: string = '';
+	let className = '';
 	export { className as class };
 
 	const width = (span: Span | undefined) => (span ? `${(span / 12) * 100}%` : undefined);

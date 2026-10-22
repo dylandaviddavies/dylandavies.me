@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Shelf from '../common/Shelf.svelte';
 
-	let visible: boolean = false;
+	let visible = false;
 
-	const id: string = 'navShelf';
+	const id = 'navShelf';
 
 	const links = [
 		{ href: '#home', text: 'Home' },

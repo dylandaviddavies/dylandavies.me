@@ -1,6 +1,6 @@
 <script lang="ts">
 	export let direction: 'ltr' | 'ttb' | 'btt' | 'rtl' = 'rtl';
-	export let color: string = 'primary';
+	export let color = 'primary';
 
 	const directions = {
 		ltr: 'scale-x-0 origin-right group-hocus:origin-left group-hocus:scale-x-100',
