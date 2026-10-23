@@ -15,8 +15,8 @@
 			<SectionHeading>Let's Get In Touch</SectionHeading>
 
 			<p class="text-center mt-4 mb-7">
-				Although I’m not currently looking for any new opportunities, my inbox is always open.
-				Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+				I’m currently open to new opportunities. If you have a role or project in mind, I’ll try
+				my best to get back to you!
 			</p>
 
 			<Button kind="outline" href="mailto:dylandaviddavies@gmail.com">
